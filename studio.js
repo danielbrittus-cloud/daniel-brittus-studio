@@ -1,6 +1,99 @@
 const root = document.documentElement;
 const glow = document.querySelector('.cursor-glow');
 const revealItems = document.querySelectorAll('.reveal');
+const LANGUAGE_STORAGE_KEY = 'db-language';
+const languageButtons = document.querySelectorAll('[data-lang]');
+
+const portfolioCopy = {
+  PT: {
+    navGames: 'Jogos',
+    navStudio: 'Estudio',
+    navContact: 'Contato',
+    heroEyebrow: 'HTML5 games / arcade / mobile-first',
+    heroTitle: 'Escolha seu jogo',
+    heroCopy: 'Dois projetos jogaveis logo de cara, feitos para browser, celular e apresentacao para plataformas globais.',
+    towerCardCopy: 'Construa uma torre infinita, enfrente climas e suba da cidade ate o espaco.',
+    novaCardCopy: 'Defenda setores hostis, evolua seu arsenal e avance por fases desbloqueaveis.',
+    playButton: 'Jogar',
+    metricWeb: 'HTML5 leve, responsivo e preparado para iframe, mobile e desktop.',
+    metricArcade: 'Loops curtos, feedback visual forte e dificuldade progressiva.',
+    metricPublisher: 'Projetos pensados para retencao, clareza e apresentacao profissional.',
+    screensEyebrow: 'screenshots',
+    screensTitle: 'Momentos do Tower Build em progresso real.',
+    shotCityTitle: 'Cidade',
+    shotCityCopy: 'Inicio direto, leitura clara e desafio de alinhamento desde os primeiros blocos.',
+    shotSkyTitle: 'Ceu turbulento',
+    shotSkyCopy: 'Climas e elementos de cena mudam a sensacao de altura sem poluir a jogabilidade.',
+    shotSpaceTitle: 'Espaco',
+    shotSpaceCopy: 'O objetivo longo vira recompensa visual, com picos de satisfacao na progressao.',
+    contactEyebrow: 'publisher pitch',
+    contactTitle: 'Proximo alvo: jogos web com padrao de plataforma global.',
+    contactCopy: 'Daniel Brittus esta construindo um catalogo de jogos HTML5 com foco em mobile, retencao e apresentacao pronta para publishers.',
+    contactButton: 'Falar com o estudio'
+  },
+  EN: {
+    navGames: 'Games',
+    navStudio: 'Studio',
+    navContact: 'Contact',
+    heroEyebrow: 'HTML5 games / arcade / mobile-first',
+    heroTitle: 'Choose your game',
+    heroCopy: 'Two playable projects up front, built for browser, mobile, and global platform review.',
+    towerCardCopy: 'Build an endless tower, face changing weather, and climb from the city into space.',
+    novaCardCopy: 'Defend hostile sectors, upgrade your arsenal, and progress through unlocked missions.',
+    playButton: 'Play',
+    metricWeb: 'Lightweight HTML5 builds ready for iframe, mobile, and desktop.',
+    metricArcade: 'Short loops, strong visual feedback, and progressive difficulty.',
+    metricPublisher: 'Projects shaped around retention, clarity, and professional presentation.',
+    screensEyebrow: 'screenshots',
+    screensTitle: 'Real in-game moments from Tower Build.',
+    shotCityTitle: 'City',
+    shotCityCopy: 'Immediate readability and alignment challenge from the first blocks.',
+    shotSkyTitle: 'Turbulent Sky',
+    shotSkyCopy: 'Weather and scenery shift the sense of height without cluttering gameplay.',
+    shotSpaceTitle: 'Space',
+    shotSpaceCopy: 'The long-term goal becomes a visual reward with satisfying progression spikes.',
+    contactEyebrow: 'publisher pitch',
+    contactTitle: 'Next target: web games with global platform polish.',
+    contactCopy: 'Daniel Brittus is building an HTML5 game catalog focused on mobile, retention, and publisher-ready presentation.',
+    contactButton: 'Contact the studio'
+  }
+};
+
+function getStoredLanguage() {
+  const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY) || localStorage.getItem('idioma_jogo');
+  return saved === 'EN' ? 'EN' : 'PT';
+}
+
+function setStoredLanguage(language) {
+  localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+  localStorage.setItem('idioma_jogo', language);
+}
+
+function applyPortfolioLanguage(language) {
+  const dictionary = portfolioCopy[language] || portfolioCopy.PT;
+  document.documentElement.lang = language === 'EN' ? 'en' : 'pt-BR';
+
+  document.querySelectorAll('[data-i18n]').forEach((item) => {
+    const value = dictionary[item.dataset.i18n];
+    if (value) {
+      item.textContent = value;
+    }
+  });
+
+  languageButtons.forEach((button) => {
+    button.setAttribute('aria-pressed', String(button.dataset.lang === language));
+  });
+}
+
+applyPortfolioLanguage(getStoredLanguage());
+
+languageButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const language = button.dataset.lang === 'EN' ? 'EN' : 'PT';
+    setStoredLanguage(language);
+    applyPortfolioLanguage(language);
+  });
+});
 
 window.addEventListener('pointermove', (event) => {
   if (!glow) {

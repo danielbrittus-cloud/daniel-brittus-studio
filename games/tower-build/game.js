@@ -16,20 +16,155 @@ const DYNAMIC_SETTLED_BLOCKS = 2;
 const ARCADE_DROP_SPEED = 1380;
 const MIN_LANDING_OVERLAP = 0.18;
 const SOUND_STORAGE_KEY = 'tower-build-muted-v1';
+const LANGUAGE_STORAGE_KEY = 'db-language';
 let hasStartedOnce = false;
 
 const ENCOURAGEMENT_MILESTONES = [
-  { height: 120, title: 'Voce pegou o ritmo!', subtitle: 'continue subindo' },
-  { height: 260, title: 'Voce esta indo bem!', subtitle: 'a cidade ficou pequena' },
-  { height: 460, title: 'Voce e fera!', subtitle: 'a torre esta viva' },
-  { height: 720, title: 'Sequencia bonita!', subtitle: 'mira no encaixe perfeito' },
-  { height: 1040, title: 'Altitude absurda!', subtitle: 'o vento esta contra voce' },
-  { height: 1420, title: 'Nao olha pra baixo!', subtitle: 'a estratosfera vem ai' },
-  { height: 1840, title: 'Reta final pro espaco!', subtitle: 'fase boss chegando' },
-  { height: 2260, title: 'Voce chegou na Lua!', subtitle: 'agora e outro jogo' },
-  { height: 3000, title: 'Lenda da torre!', subtitle: 'so os fortes chegam aqui' },
-  { height: 3800, title: 'Infinito desbloqueado!', subtitle: 'vai buscar o recorde' }
+  { height: 120, key: 'rhythm' },
+  { height: 260, key: 'doingWell' },
+  { height: 460, key: 'beast' },
+  { height: 720, key: 'streak' },
+  { height: 1040, key: 'altitude' },
+  { height: 1420, key: 'dontLook' },
+  { height: 1840, key: 'spaceFinal' },
+  { height: 2260, key: 'moon' },
+  { height: 3000, key: 'legend' },
+  { height: 3800, key: 'infinite' }
 ];
+
+const I18N = {
+  PT: {
+    menuKicker: 'Torre infinita',
+    play: 'Jogar',
+    soundOn: 'Som ligado',
+    soundOff: 'Som desligado',
+    rankingLocal: 'Ranking local',
+    score: 'Score',
+    height: 'Altura',
+    combo: 'Combo',
+    city: 'Cidade',
+    show: 'Mostrar',
+    hide: 'Ocultar',
+    emptyRanking: 'Sem jogadas ainda',
+    instruction: 'Clique ou aperte espaco para soltar',
+    gameOverEyebrow: 'Fim da rodada',
+    restart: 'Reiniciar',
+    defaultGameOverTitle: 'A torre desabou',
+    defaultGameOverReason: 'Aperte R ou clique para tentar de novo.',
+    outOfTowerTitle: 'Casa fora da torre',
+    missedStackReason: 'O bloco passou pela pilha sem encaixar. Clique ou aperte R para reiniciar.',
+    farFallReason: 'O bloco caiu longe demais. Clique ou aperte R para reiniciar.',
+    landedOutsideReason: 'O bloco pousou fora da pilha. Clique ou aperte R para reiniciar.',
+    collapseReason: 'A estrutura perdeu estabilidade. Clique ou aperte R para tentar de novo.',
+    roundEnd: 'Fim da rodada',
+    perfect: (combo) => `Perfeito x${combo}!`,
+    goodFit: 'Bom encaixe',
+    holdTower: 'Segura essa torre...',
+    stages: {
+      site: { label: 'Canteiro', weather: 'calmo' },
+      buildings: { label: 'Predios', weather: 'brisa' },
+      'tall-buildings': { label: 'Predios altos', weather: 'chuva' },
+      clouds: { label: 'Nuvens', weather: 'vento' },
+      'high-clouds': { label: 'Nuvens altas', weather: 'turbulencia' },
+      'orange-sky': { label: 'Ceu alaranjado', weather: 'gelo' },
+      'purple-sky': { label: 'Ceu roxo', weather: 'ar rarefeito' },
+      space: { label: 'Espaco', weather: 'boss' },
+      moon: { label: 'Lua', weather: 'orbita' },
+      mars: { label: 'Marte', weather: 'poeira' },
+      jupiter: { label: 'Jupiter', weather: 'gravidade' },
+      saturn: { label: 'Saturno', weather: 'aneis' }
+    },
+    milestones: {
+      rhythm: { title: 'Voce pegou o ritmo!', subtitle: 'continue subindo' },
+      doingWell: { title: 'Voce esta indo bem!', subtitle: 'a cidade ficou pequena' },
+      beast: { title: 'Voce e fera!', subtitle: 'a torre esta viva' },
+      streak: { title: 'Sequencia bonita!', subtitle: 'mira no encaixe perfeito' },
+      altitude: { title: 'Altitude absurda!', subtitle: 'o vento esta contra voce' },
+      dontLook: { title: 'Nao olha pra baixo!', subtitle: 'a estratosfera vem ai' },
+      spaceFinal: { title: 'Reta final pro espaco!', subtitle: 'fase boss chegando' },
+      moon: { title: 'Voce chegou na Lua!', subtitle: 'agora e outro jogo' },
+      legend: { title: 'Lenda da torre!', subtitle: 'so os fortes chegam aqui' },
+      infinite: { title: 'Infinito desbloqueado!', subtitle: 'vai buscar o recorde' }
+    }
+  },
+  EN: {
+    menuKicker: 'Endless tower',
+    play: 'Play',
+    soundOn: 'Sound on',
+    soundOff: 'Sound off',
+    rankingLocal: 'Local ranking',
+    score: 'Score',
+    height: 'Height',
+    combo: 'Combo',
+    city: 'City',
+    show: 'Show',
+    hide: 'Hide',
+    emptyRanking: 'No runs yet',
+    instruction: 'Click or press space to drop',
+    gameOverEyebrow: 'Run over',
+    restart: 'Restart',
+    defaultGameOverTitle: 'The tower collapsed',
+    defaultGameOverReason: 'Press R or click to try again.',
+    outOfTowerTitle: 'House missed the tower',
+    missedStackReason: 'The block passed the stack without locking in. Click or press R to restart.',
+    farFallReason: 'The block fell too far away. Click or press R to restart.',
+    landedOutsideReason: 'The block landed outside the stack. Click or press R to restart.',
+    collapseReason: 'The structure lost stability. Click or press R to try again.',
+    roundEnd: 'Run over',
+    perfect: (combo) => `Perfect x${combo}!`,
+    goodFit: 'Good fit',
+    holdTower: 'Hold that tower...',
+    stages: {
+      site: { label: 'Site', weather: 'calm' },
+      buildings: { label: 'Buildings', weather: 'breeze' },
+      'tall-buildings': { label: 'High-rises', weather: 'rain' },
+      clouds: { label: 'Clouds', weather: 'wind' },
+      'high-clouds': { label: 'High clouds', weather: 'turbulence' },
+      'orange-sky': { label: 'Orange sky', weather: 'ice' },
+      'purple-sky': { label: 'Purple sky', weather: 'thin air' },
+      space: { label: 'Space', weather: 'boss' },
+      moon: { label: 'Moon', weather: 'orbit' },
+      mars: { label: 'Mars', weather: 'dust' },
+      jupiter: { label: 'Jupiter', weather: 'gravity' },
+      saturn: { label: 'Saturn', weather: 'rings' }
+    },
+    milestones: {
+      rhythm: { title: 'You found the rhythm!', subtitle: 'keep climbing' },
+      doingWell: { title: 'You are doing great!', subtitle: 'the city looks tiny' },
+      beast: { title: 'You are crushing it!', subtitle: 'the tower is alive' },
+      streak: { title: 'Beautiful streak!', subtitle: 'aim for the perfect fit' },
+      altitude: { title: 'Absurd altitude!', subtitle: 'the wind is against you' },
+      dontLook: { title: 'Do not look down!', subtitle: 'the stratosphere is close' },
+      spaceFinal: { title: 'Final stretch to space!', subtitle: 'boss stage incoming' },
+      moon: { title: 'You reached the Moon!', subtitle: 'now it is a new game' },
+      legend: { title: 'Tower legend!', subtitle: 'only the strong get here' },
+      infinite: { title: 'Infinity unlocked!', subtitle: 'go claim the record' }
+    }
+  }
+};
+
+let currentLanguage = getStoredLanguage();
+
+function getStoredLanguage() {
+  const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY) || localStorage.getItem('idioma_jogo');
+  return saved === 'EN' ? 'EN' : 'PT';
+}
+
+function setStoredLanguage(language) {
+  currentLanguage = language === 'EN' ? 'EN' : 'PT';
+  localStorage.setItem(LANGUAGE_STORAGE_KEY, currentLanguage);
+  localStorage.setItem('idioma_jogo', currentLanguage);
+  document.documentElement.lang = currentLanguage === 'EN' ? 'en' : 'pt-BR';
+  window.dispatchEvent(new CustomEvent('tower-build-language-change', { detail: { language: currentLanguage } }));
+}
+
+function copy() {
+  return I18N[currentLanguage] || I18N.PT;
+}
+
+function stageCopy(stage) {
+  return copy().stages[stage.id] || { label: stage.label, weather: stage.weather };
+}
 
 const HOUSE_ASSETS = [
   { key: 'house-1', url: 'casa_1.png' },
@@ -102,32 +237,43 @@ class Hud {
     this.startButton = document.querySelector('#start-button');
     this.muteButton = document.querySelector('#mute-button');
     this.menuRankingList = document.querySelector('#menu-ranking-list');
+    this.languageButtons = document.querySelectorAll('[data-lang]');
+    this.menuKicker = document.querySelector('.menu-content p');
+    this.menuRankingTitle = document.querySelector('.menu-ranking > span');
+    this.hudLabels = document.querySelectorAll('.hud-panel span');
+    this.gameOverEyebrow = document.querySelector('.game-over-panel span');
 
     this.rankingToggle?.addEventListener('click', () => {
       const collapsed = this.ranking?.classList.toggle('collapsed');
-      this.rankingToggle.textContent = collapsed ? 'Mostrar' : 'Ocultar';
+      this.rankingToggle.textContent = collapsed ? copy().show : copy().hide;
       this.rankingToggle.setAttribute('aria-expanded', String(!collapsed));
     });
 
     this.restartButton.addEventListener('click', () => window.dispatchEvent(new CustomEvent('tower-build-restart')));
     this.startButton?.addEventListener('click', () => window.dispatchEvent(new CustomEvent('tower-build-start')));
     this.muteButton?.addEventListener('click', () => window.dispatchEvent(new CustomEvent('tower-build-toggle-sound')));
+    this.languageButtons.forEach((button) => {
+      button.addEventListener('click', () => setStoredLanguage(button.dataset.lang === 'EN' ? 'EN' : 'PT'));
+    });
     this.gameOver.addEventListener('click', (event) => {
       if (event.target === this.gameOver) {
         window.dispatchEvent(new CustomEvent('tower-build-restart'));
       }
     });
+
+    this.applyLanguage();
   }
 
   updateScore(snapshot) {
-    this.scoreValue.textContent = snapshot.score.toLocaleString('pt-BR');
+    this.scoreValue.textContent = snapshot.score.toLocaleString(currentLanguage === 'EN' ? 'en-US' : 'pt-BR');
     this.heightValue.textContent = `${Math.floor(snapshot.height)} m`;
     this.comboValue.textContent = `x${snapshot.combo}`;
   }
 
   updateWeather(stage) {
-    this.weatherLabel.textContent = stage.label;
-    this.weatherValue.textContent = stage.weather;
+    const translated = stageCopy(stage);
+    this.weatherLabel.textContent = translated.label;
+    this.weatherValue.textContent = translated.weather;
   }
 
   updateRanking(entries) {
@@ -140,14 +286,15 @@ class Hud {
 
       if (entries.length === 0) {
         const empty = document.createElement('li');
-        empty.textContent = 'Sem jogadas ainda';
+        empty.textContent = copy().emptyRanking;
         list.appendChild(empty);
         return;
       }
 
       entries.slice(0, 5).forEach((entry) => {
         const item = document.createElement('li');
-        item.innerHTML = `<strong>${entry.score.toLocaleString('pt-BR')}</strong><span>${Math.floor(entry.height)} m</span>`;
+        const score = entry.score.toLocaleString(currentLanguage === 'EN' ? 'en-US' : 'pt-BR');
+        item.innerHTML = `<strong>${score}</strong><span>${Math.floor(entry.height)} m</span>`;
         list.appendChild(item);
       });
     });
@@ -159,7 +306,7 @@ class Hud {
     window.requestAnimationFrame(() => this.message.classList.add('pop'));
   }
 
-  showGameOver(title, reason) {
+  showGameOver(title = copy().defaultGameOverTitle, reason = copy().defaultGameOverReason) {
     this.gameOverTitle.textContent = title;
     this.gameOverReason.textContent = reason;
     this.gameOver.classList.remove('hidden');
@@ -182,8 +329,36 @@ class Hud {
       return;
     }
 
-    this.muteButton.textContent = muted ? 'Som desligado' : 'Som ligado';
+    this.muteButton.textContent = muted ? copy().soundOff : copy().soundOn;
     this.muteButton.setAttribute('aria-pressed', String(muted));
+  }
+
+  applyLanguage(stage) {
+    document.documentElement.lang = currentLanguage === 'EN' ? 'en' : 'pt-BR';
+    const text = copy();
+
+    if (this.menuKicker) this.menuKicker.textContent = text.menuKicker;
+    if (this.startButton) this.startButton.textContent = text.play;
+    if (this.menuRankingTitle) this.menuRankingTitle.textContent = text.rankingLocal;
+    if (this.gameOverEyebrow) this.gameOverEyebrow.textContent = text.gameOverEyebrow;
+    if (this.restartButton) this.restartButton.textContent = text.restart;
+    if (this.rankingToggle) {
+      const collapsed = this.ranking?.classList.contains('collapsed');
+      this.rankingToggle.textContent = collapsed ? text.show : text.hide;
+      this.rankingToggle.setAttribute('aria-expanded', String(!collapsed));
+    }
+
+    const labels = [text.score, text.height, text.combo, text.city];
+    this.hudLabels.forEach((label, index) => {
+      label.textContent = labels[index] || label.textContent;
+    });
+
+    this.languageButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.lang === currentLanguage));
+    });
+
+    this.updateSoundButton(this.muteButton?.getAttribute('aria-pressed') === 'true');
+    if (stage) this.updateWeather(stage);
   }
 }
 
@@ -431,6 +606,7 @@ class GameScene extends Phaser.Scene {
     this.restartHandler = () => this.restartGame();
     this.startHandler = () => this.startRun();
     this.soundToggleHandler = () => this.toggleSound();
+    this.languageHandler = () => this.applyLanguage();
     this.audio = new AudioSystem();
     this.waitingForStart = true;
     this.lastViewportWidth = 0;
@@ -463,6 +639,7 @@ class GameScene extends Phaser.Scene {
     this.lastViewportWidth = this.scale.width;
     this.lastViewportHeight = this.scale.height;
     this.hud.hideGameOver();
+    this.hud.applyLanguage(this.currentStage);
     if (hasStartedOnce) {
       this.waitingForStart = false;
       this.hud.hideStartMenu();
@@ -481,6 +658,7 @@ class GameScene extends Phaser.Scene {
     window.addEventListener('tower-build-restart', this.restartHandler);
     window.addEventListener('tower-build-start', this.startHandler);
     window.addEventListener('tower-build-toggle-sound', this.soundToggleHandler);
+    window.addEventListener('tower-build-language-change', this.languageHandler);
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => this.shutdown());
   }
 
@@ -659,7 +837,7 @@ class GameScene extends Phaser.Scene {
     this.waitingForStart = false;
     hasStartedOnce = true;
     this.hud.hideStartMenu();
-    this.hud.flashMessage('Clique ou aperte espaco para soltar');
+    this.hud.flashMessage(copy().instruction);
     this.audio.play('start');
     this.pulseScreen(0xffe07a, 0.2);
   }
@@ -667,6 +845,16 @@ class GameScene extends Phaser.Scene {
   toggleSound() {
     const muted = this.audio.toggleMuted();
     this.hud.updateSoundButton(muted);
+  }
+
+  applyLanguage() {
+    this.hud.applyLanguage(this.currentStage || this.getStage(this.currentHeight));
+    this.hud.updateScore(this.score.snapshot);
+    this.hud.updateRanking(this.ranking.entries);
+
+    if (this.waitingForStart) {
+      this.hud.flashMessage(copy().instruction);
+    }
   }
 
   spawnCarriedBlock() {
@@ -769,12 +957,12 @@ class GameScene extends Phaser.Scene {
       }
 
       if (this.didMissLanding(block)) {
-        this.endRun('Casa fora da torre', 'O bloco passou pela pilha sem encaixar. Clique ou aperte R para reiniciar.');
+        this.endRun(copy().outOfTowerTitle, copy().missedStackReason);
         return;
       }
 
       if (block.y > GROUND_Y + 300 || block.x < -160 || block.x > WORLD_WIDTH + 160) {
-        this.endRun('Casa fora da torre', 'O bloco caiu longe demais. Clique ou aperte R para reiniciar.');
+        this.endRun(copy().outOfTowerTitle, copy().farFallReason);
         return;
       }
     }
@@ -797,7 +985,7 @@ class GameScene extends Phaser.Scene {
     const stage = this.getStage(this.currentHeight);
     if (stage.id !== this.currentStage.id) {
       this.applyStage(stage);
-      this.hud.flashMessage(`${stage.label}!`);
+      this.hud.flashMessage(`${stageCopy(stage).label}!`);
       this.audio.play('stage');
       this.pulseScreen(stage.skyBottom, 0.16);
     }
@@ -821,7 +1009,8 @@ class GameScene extends Phaser.Scene {
     const x = Math.min(this.scale.width - 22, Math.max(230, this.scale.width * 0.78));
     const y = this.scale.height < 620 ? 104 : 132;
     const group = this.add.container(x, y).setScrollFactor(0).setDepth(38);
-    const title = this.add.text(0, 0, milestone.title, {
+    const milestoneText = copy().milestones[milestone.key] || I18N.PT.milestones[milestone.key];
+    const title = this.add.text(0, 0, milestoneText.title, {
       fontFamily: 'Inter, Arial, sans-serif',
       fontSize: this.scale.width < 680 ? '20px' : '25px',
       fontStyle: '900',
@@ -830,7 +1019,7 @@ class GameScene extends Phaser.Scene {
       strokeThickness: 5,
       align: 'right'
     }).setOrigin(1, 0);
-    const subtitle = this.add.text(0, 30, milestone.subtitle, {
+    const subtitle = this.add.text(0, 30, milestoneText.subtitle, {
       fontFamily: 'Inter, Arial, sans-serif',
       fontSize: this.scale.width < 680 ? '12px' : '14px',
       fontStyle: '800',
@@ -948,7 +1137,7 @@ class GameScene extends Phaser.Scene {
     const height = Math.max(0, (GROUND_Y - block.y) / 2.15);
 
     if (previous && offset > BLOCK_WIDTH * (1 - this.getRequiredLandingOverlap())) {
-      this.endRun('Casa fora da torre', 'O bloco pousou fora da pilha. Clique ou aperte R para reiniciar.');
+      this.endRun(copy().outOfTowerTitle, copy().landedOutsideReason);
       return;
     }
 
@@ -966,11 +1155,11 @@ class GameScene extends Phaser.Scene {
     this.playLandingFeedback(block, precision, snapshot);
 
     if (precision > 0.88) {
-      this.hud.flashMessage(`Perfeito x${snapshot.combo}!`);
+      this.hud.flashMessage(copy().perfect(snapshot.combo));
     } else if (precision > 0.55) {
-      this.hud.flashMessage('Bom encaixe');
+      this.hud.flashMessage(copy().goodFit);
     } else {
-      this.hud.flashMessage('Segura essa torre...');
+      this.hud.flashMessage(copy().holdTower);
     }
   }
 
@@ -1043,7 +1232,7 @@ class GameScene extends Phaser.Scene {
       const outOfLane = block.x < -120 || block.x > WORLD_WIDTH + 120;
 
       if (tooTilted || driftedAfterSettling || outOfLane || this.towerInstability > 2.25) {
-        this.endRun('A torre desabou', 'A estrutura perdeu estabilidade. Clique ou aperte R para tentar de novo.');
+        this.endRun(copy().defaultGameOverTitle, copy().collapseReason);
         return;
       }
     }
@@ -1228,13 +1417,13 @@ class GameScene extends Phaser.Scene {
   pruneSleepingBlocks() {
   }
 
-  endRun(title = 'A torre desabou', reason = 'Aperte R ou clique para tentar de novo.') {
+  endRun(title = copy().defaultGameOverTitle, reason = copy().defaultGameOverReason) {
     if (this.isGameOver) {
       return;
     }
 
     this.isGameOver = true;
-    this.hud.flashMessage('Fim da rodada');
+    this.hud.flashMessage(copy().roundEnd);
     this.hud.showGameOver(title, reason);
     this.audio.play('gameover');
     if (this.carriedBlock) {
@@ -1252,6 +1441,7 @@ class GameScene extends Phaser.Scene {
     window.removeEventListener('tower-build-restart', this.restartHandler);
     window.removeEventListener('tower-build-start', this.startHandler);
     window.removeEventListener('tower-build-toggle-sound', this.soundToggleHandler);
+    window.removeEventListener('tower-build-language-change', this.languageHandler);
   }
 }
 

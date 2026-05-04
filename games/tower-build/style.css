@@ -92,6 +92,34 @@ body {
   cursor: pointer;
 }
 
+.language-switch {
+  display: inline-flex;
+  width: fit-content;
+  gap: 4px;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(8, 13, 20, 0.34);
+  backdrop-filter: blur(6px);
+}
+
+.language-switch button {
+  min-width: 42px;
+  height: 30px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.language-switch button[aria-pressed="true"] {
+  background: #ffd24a;
+  color: #1b1f24;
+}
+
 #start-button {
   background: #ffd24a;
   color: #1b1f24;

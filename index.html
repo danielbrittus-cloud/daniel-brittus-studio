@@ -19,10 +19,14 @@
         DB Studio
       </a>
       <nav aria-label="Navegacao principal">
-        <a href="#games">Jogos</a>
-        <a href="#studio">Estudio</a>
-        <a href="#contact">Contato</a>
+        <a href="#games" data-i18n="navGames">Jogos</a>
+        <a href="#studio" data-i18n="navStudio">Estudio</a>
+        <a href="#contact" data-i18n="navContact">Contato</a>
       </nav>
+      <div class="language-switch" aria-label="Idioma">
+        <button type="button" data-lang="PT" aria-pressed="true">PT</button>
+        <button type="button" data-lang="EN" aria-pressed="false">EN</button>
+      </div>
     </header>
 
     <main id="top">
@@ -30,9 +34,9 @@
         <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow">HTML5 games / arcade / mobile-first</p>
-          <h1 id="hero-title">Escolha seu jogo</h1>
-          <p class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">HTML5 games / arcade / mobile-first</p>
+          <h1 id="hero-title" data-i18n="heroTitle">Escolha seu jogo</h1>
+          <p class="hero-copy" data-i18n="heroCopy">
             Dois projetos jogaveis logo de cara, feitos para browser, celular e apresentacao para
             plataformas globais.
           </p>
@@ -42,8 +46,8 @@
               <div>
                 <span>Arcade / Timing</span>
                 <h2>Tower Build</h2>
-                <p>Construa uma torre infinita, enfrente climas e suba da cidade ate o espaco.</p>
-                <a class="primary-action" href="games/tower-build/">Jogar</a>
+                <p data-i18n="towerCardCopy">Construa uma torre infinita, enfrente climas e suba da cidade ate o espaco.</p>
+                <a class="primary-action" href="games/tower-build/" data-i18n="playButton">Jogar</a>
               </div>
             </article>
             <article class="game-card hero-game-card glass">
@@ -51,8 +55,8 @@
               <div>
                 <span>Sci-fi / Action</span>
                 <h2>Nova Horizon</h2>
-                <p>Defenda setores hostis, evolua seu arsenal e avance por fases desbloqueaveis.</p>
-                <a class="primary-action" href="games/nova-horizon/">Jogar</a>
+                <p data-i18n="novaCardCopy">Defenda setores hostis, evolua seu arsenal e avance por fases desbloqueaveis.</p>
+                <a class="primary-action" href="games/nova-horizon/" data-i18n="playButton">Jogar</a>
               </div>
             </article>
           </div>
@@ -63,52 +67,52 @@
         <article>
           <span>01</span>
           <strong>Web-ready</strong>
-          <p>HTML5 leve, responsivo e preparado para iframe, mobile e desktop.</p>
+          <p data-i18n="metricWeb">HTML5 leve, responsivo e preparado para iframe, mobile e desktop.</p>
         </article>
         <article>
           <span>02</span>
           <strong>Arcade feel</strong>
-          <p>Loops curtos, feedback visual forte e dificuldade progressiva.</p>
+          <p data-i18n="metricArcade">Loops curtos, feedback visual forte e dificuldade progressiva.</p>
         </article>
         <article>
           <span>03</span>
           <strong>Publisher mindset</strong>
-          <p>Projetos pensados para retencao, clareza e apresentacao profissional.</p>
+          <p data-i18n="metricPublisher">Projetos pensados para retencao, clareza e apresentacao profissional.</p>
         </article>
       </section>
 
       <section id="studio" class="studio-section" aria-labelledby="studio-title">
         <div class="section-heading reveal">
-          <p class="eyebrow">screenshots</p>
-          <h2 id="studio-title">Momentos do Tower Build em progresso real.</h2>
+          <p class="eyebrow" data-i18n="screensEyebrow">screenshots</p>
+          <h2 id="studio-title" data-i18n="screensTitle">Momentos do Tower Build em progresso real.</h2>
         </div>
         <div class="studio-grid">
           <article class="glass reveal">
             <img src="assets/screenshot1.PNG" alt="Tower Build com predios ao fundo" />
-            <h3>Cidade</h3>
-            <p>Inicio direto, leitura clara e desafio de alinhamento desde os primeiros blocos.</p>
+            <h3 data-i18n="shotCityTitle">Cidade</h3>
+            <p data-i18n="shotCityCopy">Inicio direto, leitura clara e desafio de alinhamento desde os primeiros blocos.</p>
           </article>
           <article class="glass reveal">
             <img src="assets/screenshot2.PNG" alt="Tower Build com vento e aviao no ceu" />
-            <h3>Ceu turbulento</h3>
-            <p>Climas e elementos de cena mudam a sensacao de altura sem poluir a jogabilidade.</p>
+            <h3 data-i18n="shotSkyTitle">Ceu turbulento</h3>
+            <p data-i18n="shotSkyCopy">Climas e elementos de cena mudam a sensacao de altura sem poluir a jogabilidade.</p>
           </article>
           <article class="glass reveal">
             <img src="assets/screenshot3.PNG" alt="Tower Build chegando ao espaco com a lua" />
-            <h3>Espaco</h3>
-            <p>O objetivo longo vira recompensa visual, com picos de satisfacao na progressao.</p>
+            <h3 data-i18n="shotSpaceTitle">Espaco</h3>
+            <p data-i18n="shotSpaceCopy">O objetivo longo vira recompensa visual, com picos de satisfacao na progressao.</p>
           </article>
         </div>
       </section>
 
       <section id="contact" class="contact glass reveal" aria-labelledby="contact-title">
-        <p class="eyebrow">publisher pitch</p>
-        <h2 id="contact-title">Proximo alvo: jogos web com padrao de plataforma global.</h2>
-        <p>
+        <p class="eyebrow" data-i18n="contactEyebrow">publisher pitch</p>
+        <h2 id="contact-title" data-i18n="contactTitle">Proximo alvo: jogos web com padrao de plataforma global.</h2>
+        <p data-i18n="contactCopy">
           Daniel Brittus esta construindo um catalogo de jogos HTML5 com foco em mobile, retencao e
           apresentacao pronta para publishers.
         </p>
-        <a class="primary-action" href="mailto:danielbrittus@gmail.com">Falar com o estudio</a>
+        <a class="primary-action" href="mailto:danielbrittus@gmail.com" data-i18n="contactButton">Falar com o estudio</a>
       </section>
     </main>
 
