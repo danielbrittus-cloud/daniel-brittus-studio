@@ -31,6 +31,7 @@ const config = {
 };
 
 const jogo = new Phaser.Game(config);
+window.novaHorizonGame = jogo;
 
 // --- VACINA PARA O BUG DO GAMEPAD (PHASER 3.60) ---
 // Filtra controles "fantasmas" antes do Phaser tentar limpá-los na mudança de cena

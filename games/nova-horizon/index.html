@@ -2,13 +2,18 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nova Horizon</title>
     <meta name="theme-color" content="#02060d">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2302060d'/%3E%3Cpath d='M32 8 54 56 32 45 10 56Z' fill='%2300e5ff'/%3E%3Cpath d='M32 17 43 43 32 37 21 43Z' fill='%23ffffff'/%3E%3C/svg%3E">
     <script src="phaser.min.js"></script>
     <style>
         /* Estilo para centralizar o jogo na tela e dar um "glow" de ficção científica */
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
         body {
             margin: 0;
             padding: 0;
@@ -16,8 +21,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            min-height: 100dvh;
             overflow: hidden;
+        }
+        body.mobile-fullscreen-mode {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            min-height: 100dvh;
+            background: #000000;
         }
         canvas {
             box-shadow: 0 0 40px rgba(0, 200, 255, 0.15); /* Brilho neon sutil nas bordas */
@@ -25,6 +40,11 @@
             border-radius: 4px;
             image-rendering: auto;
             filter: saturate(1.03) contrast(1.02);
+        }
+        body.mobile-fullscreen-mode canvas {
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
         }
         .mobile-landscape-gate {
             position: fixed;
@@ -79,8 +99,8 @@
     <div id="mobile-landscape-gate" class="mobile-landscape-gate" aria-live="polite">
         <div class="mobile-landscape-card">
             <h1>NOVA HORIZON</h1>
-            <p>Toque para abrir em tela cheia e jogar no celular em modo deitado.</p>
-            <button type="button">JOGAR EM TELA CHEIA</button>
+            <p data-mobile-gate-copy>Toque para abrir em tela cheia e jogar no celular em modo deitado.</p>
+            <button type="button" data-mobile-gate-button>JOGAR EM TELA CHEIA</button>
         </div>
     </div>
     <script>
@@ -89,15 +109,55 @@
             const gate = document.getElementById('mobile-landscape-gate');
             if (!isMobile || !gate) return;
 
+            const dictionary = {
+                PT: {
+                    copy: 'Toque para abrir em tela cheia e jogar no celular em modo deitado.',
+                    button: 'JOGAR EM TELA CHEIA'
+                },
+                EN: {
+                    copy: 'Tap to open fullscreen and play on mobile in landscape mode.',
+                    button: 'PLAY FULLSCREEN'
+                }
+            };
+            const storedLanguage = localStorage.getItem('db-language') || localStorage.getItem('idioma_jogo') || 'PT';
+            const language = storedLanguage === 'EN' ? 'EN' : 'PT';
+            const text = dictionary[language];
+            document.documentElement.lang = language === 'EN' ? 'en' : 'pt-BR';
+            gate.querySelector('[data-mobile-gate-copy]').textContent = text.copy;
+            gate.querySelector('[data-mobile-gate-button]').textContent = text.button;
             gate.classList.add('is-visible');
 
+            const requestBrowserFullscreen = async () => {
+                const target = document.documentElement;
+                const request =
+                    target.requestFullscreen ||
+                    target.webkitRequestFullscreen ||
+                    target.msRequestFullscreen;
+
+                if (!document.fullscreenElement && !document.webkitFullscreenElement && request) {
+                    await request.call(target, { navigationUI: 'hide' });
+                }
+            };
+
+            const requestPhaserFullscreen = () => {
+                const game = window.novaHorizonGame;
+                if (game && game.scale && !game.scale.isFullscreen) {
+                    game.scale.startFullscreen({ navigationUI: 'hide' });
+                }
+            };
+
             const enterMobilePlay = async () => {
+                document.body.classList.add('mobile-fullscreen-mode');
                 try {
-                    if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
-                        await document.documentElement.requestFullscreen();
-                    }
+                    await requestBrowserFullscreen();
                 } catch (error) {
                     console.info('Fullscreen indisponivel neste navegador.', error);
+                }
+
+                try {
+                    requestPhaserFullscreen();
+                } catch (error) {
+                    console.info('Fullscreen do Phaser indisponivel neste navegador.', error);
                 }
 
                 try {
@@ -109,9 +169,13 @@
                 }
 
                 gate.classList.add('is-hidden');
+                setTimeout(() => {
+                    requestPhaserFullscreen();
+                    window.dispatchEvent(new Event('resize'));
+                }, 160);
             };
 
-            gate.querySelector('button').addEventListener('click', enterMobilePlay, { once: true });
+            gate.querySelector('[data-mobile-gate-button]').addEventListener('click', enterMobilePlay, { once: true });
         })();
     </script>
     <script src="src/cenas/MenuInicial.js"></script>
