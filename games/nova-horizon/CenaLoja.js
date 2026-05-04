@@ -53,10 +53,16 @@ class CenaLoja extends Phaser.Scene {
 
 
         // --- BANCO DE DADOS LOCAL ---
+        const modoTestePublisher = true;
         this.moedas = parseInt(localStorage.getItem('conta_bancaria')) || 0;
         let compradasStr = localStorage.getItem('armas_compradas') || 'padrao';
-        this.armasCompradas = compradasStr.split(',');
+        this.armasCompradas = modoTestePublisher ? ['padrao', 'fuzil', 'canhao'] : compradasStr.split(',');
         this.armaEquipada = localStorage.getItem('arma_equipada') || 'padrao';
+        if (modoTestePublisher) {
+            this.moedas = Math.max(this.moedas, 99999);
+            localStorage.setItem('conta_bancaria', this.moedas);
+            localStorage.setItem('armas_compradas', this.armasCompradas.join(','));
+        }
 
         // --- O CATÁLOGO DE ARMAS (AGORA TRADUZIDO) ---
         this.catalogo = {
