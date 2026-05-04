@@ -1,0 +1,733 @@
+{
+  "frames": {
+    "voando_1": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_2": {
+      "frame": {
+        "x": 460,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_3": {
+      "frame": {
+        "x": 920,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_4": {
+      "frame": {
+        "x": 1380,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_5": {
+      "frame": {
+        "x": 1840,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_6": {
+      "frame": {
+        "x": 2300,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_7": {
+      "frame": {
+        "x": 0,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_8": {
+      "frame": {
+        "x": 460,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_9": {
+      "frame": {
+        "x": 920,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_10": {
+      "frame": {
+        "x": 1380,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_11": {
+      "frame": {
+        "x": 1840,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_12": {
+      "frame": {
+        "x": 2300,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_13": {
+      "frame": {
+        "x": 0,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_14": {
+      "frame": {
+        "x": 460,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_15": {
+      "frame": {
+        "x": 920,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_16": {
+      "frame": {
+        "x": 1380,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_17": {
+      "frame": {
+        "x": 1840,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_18": {
+      "frame": {
+        "x": 2300,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_19": {
+      "frame": {
+        "x": 0,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_20": {
+      "frame": {
+        "x": 460,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_21": {
+      "frame": {
+        "x": 920,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_22": {
+      "frame": {
+        "x": 1380,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_23": {
+      "frame": {
+        "x": 1840,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_24": {
+      "frame": {
+        "x": 2300,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_25": {
+      "frame": {
+        "x": 0,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_26": {
+      "frame": {
+        "x": 460,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_27": {
+      "frame": {
+        "x": 920,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_28": {
+      "frame": {
+        "x": 1380,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_29": {
+      "frame": {
+        "x": 1840,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_30": {
+      "frame": {
+        "x": 2300,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_31": {
+      "frame": {
+        "x": 0,
+        "y": 1295,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_32": {
+      "frame": {
+        "x": 460,
+        "y": 1295,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_33": {
+      "frame": {
+        "x": 920,
+        "y": 1295,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_34": {
+      "frame": {
+        "x": 1380,
+        "y": 1295,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_35": {
+      "frame": {
+        "x": 1840,
+        "y": 1295,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "voando_36": {
+      "frame": {
+        "x": 2300,
+        "y": 1295,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    }
+  },
+  "meta": {
+    "app": "NovaHorizonForge",
+    "hitbox": {
+      "w": 223,
+      "h": 160,
+      "offX": 160,
+      "offY": 44
+    }
+  }
+}

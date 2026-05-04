@@ -21,7 +21,7 @@
       ]
     },
     {
-      "source": "/games/tower-build/(.*)",
+      "source": "/games/(.*)",
       "headers": [
         {
           "key": "Cache-Control",

@@ -1,0 +1,5 @@
+dist/
+.vercel/
+*.zip
+Thumbs.db
+.DS_Store

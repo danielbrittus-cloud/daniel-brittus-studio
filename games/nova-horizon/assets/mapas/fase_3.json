@@ -1,0 +1,1473 @@
+{
+  "nomeFase": "fase_3",
+  "bioma": "vulcao",
+  "musica": "musica_fase_3",
+  "usarLanterna": false,
+  "zoomCamera": 0.7,
+  "danoClima": 0.08,
+  "larguraFase": 30000,
+  "alturaFase": 720,
+  "fundo": "fundo_video3",
+  "fundoTipo": "video",
+  "aliensConfig": [
+    {
+      "id": "lava",
+      "nome": "lava",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_",
+      "animFps": 12,
+      "frameCount": 45,
+      "frameWidth": 320,
+      "frameHeight": 180,
+      "scale": "3",
+      "hp": "30",
+      "bodyWidth": 121,
+      "bodyHeight": 142,
+      "bodyOffsetX": 110,
+      "bodyOffsetY": 27,
+      "frames": [
+        {
+          "nome": "andando_1",
+          "x": 0,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_10",
+          "x": 640,
+          "y": 180,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_11",
+          "x": 960,
+          "y": 180,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_12",
+          "x": 1280,
+          "y": 180,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_13",
+          "x": 1600,
+          "y": 180,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_14",
+          "x": 1920,
+          "y": 180,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_15",
+          "x": 0,
+          "y": 360,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_16",
+          "x": 320,
+          "y": 360,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_17",
+          "x": 640,
+          "y": 360,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_18",
+          "x": 960,
+          "y": 360,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_19",
+          "x": 1280,
+          "y": 360,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_2",
+          "x": 320,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_20",
+          "x": 1600,
+          "y": 360,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_21",
+          "x": 1920,
+          "y": 360,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_22",
+          "x": 0,
+          "y": 540,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_23",
+          "x": 320,
+          "y": 540,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_24",
+          "x": 640,
+          "y": 540,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_25",
+          "x": 960,
+          "y": 540,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_26",
+          "x": 1280,
+          "y": 540,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_27",
+          "x": 1600,
+          "y": 540,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_28",
+          "x": 1920,
+          "y": 540,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_29",
+          "x": 0,
+          "y": 720,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_3",
+          "x": 640,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_30",
+          "x": 320,
+          "y": 720,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_31",
+          "x": 640,
+          "y": 720,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_32",
+          "x": 960,
+          "y": 720,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_33",
+          "x": 1280,
+          "y": 720,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_34",
+          "x": 1600,
+          "y": 720,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_35",
+          "x": 1920,
+          "y": 720,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_36",
+          "x": 0,
+          "y": 900,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_37",
+          "x": 320,
+          "y": 900,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_38",
+          "x": 640,
+          "y": 900,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_39",
+          "x": 960,
+          "y": 900,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_4",
+          "x": 960,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_40",
+          "x": 1280,
+          "y": 900,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_41",
+          "x": 1600,
+          "y": 900,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_42",
+          "x": 1920,
+          "y": 900,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_43",
+          "x": 0,
+          "y": 1080,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_44",
+          "x": 320,
+          "y": 1080,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_45",
+          "x": 640,
+          "y": 1080,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_5",
+          "x": 1280,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_6",
+          "x": 1600,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_7",
+          "x": 1920,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_8",
+          "x": 0,
+          "y": 180,
+          "w": 320,
+          "h": 180
+        },
+        {
+          "nome": "andando_9",
+          "x": 320,
+          "y": 180,
+          "w": 320,
+          "h": 180
+        }
+      ],
+      "velocidade": "50",
+      "recompensa": "1500",
+      "alcanceTiro": 680,
+      "recargaTiro": 1200,
+      "velocidadePoder": 640,
+      "escalaPoder": 1.1,
+      "raioPoder": 110,
+      "intensidadePoder": 1.8,
+      "alcanceAtaque": 135,
+      "recargaAtaque": 900,
+      "comportamento": "andar_atacar"
+    },
+    {
+      "id": "dragon",
+      "nome": "dragon",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_",
+      "animFps": "20",
+      "frameCount": 47,
+      "frameWidth": 448,
+      "frameHeight": 251,
+      "fisica": "voar",
+      "comportamento": "parar_atirar",
+      "scale": 1.3,
+      "hp": "20",
+      "bodyWidth": 261,
+      "bodyHeight": 146,
+      "bodyOffsetX": 127,
+      "bodyOffsetY": 57,
+      "frames": [
+        {
+          "nome": "voando_1",
+          "x": 0,
+          "y": 0,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_10",
+          "x": 896,
+          "y": 251,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_11",
+          "x": 1344,
+          "y": 251,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_12",
+          "x": 1792,
+          "y": 251,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_13",
+          "x": 2240,
+          "y": 251,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_14",
+          "x": 2688,
+          "y": 251,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_15",
+          "x": 0,
+          "y": 502,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_16",
+          "x": 448,
+          "y": 502,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_17",
+          "x": 896,
+          "y": 502,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_18",
+          "x": 1344,
+          "y": 502,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_19",
+          "x": 1792,
+          "y": 502,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_2",
+          "x": 448,
+          "y": 0,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_20",
+          "x": 2240,
+          "y": 502,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_21",
+          "x": 2688,
+          "y": 502,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_22",
+          "x": 0,
+          "y": 753,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_23",
+          "x": 448,
+          "y": 753,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_24",
+          "x": 896,
+          "y": 753,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_25",
+          "x": 1344,
+          "y": 753,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_26",
+          "x": 1792,
+          "y": 753,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_27",
+          "x": 2240,
+          "y": 753,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_28",
+          "x": 2688,
+          "y": 753,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_29",
+          "x": 0,
+          "y": 1004,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_3",
+          "x": 896,
+          "y": 0,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_30",
+          "x": 448,
+          "y": 1004,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_31",
+          "x": 896,
+          "y": 1004,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_32",
+          "x": 1344,
+          "y": 1004,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_33",
+          "x": 1792,
+          "y": 1004,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_34",
+          "x": 2240,
+          "y": 1004,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_35",
+          "x": 2688,
+          "y": 1004,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_36",
+          "x": 0,
+          "y": 1255,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_37",
+          "x": 448,
+          "y": 1255,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_38",
+          "x": 896,
+          "y": 1255,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_39",
+          "x": 1344,
+          "y": 1255,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_4",
+          "x": 1344,
+          "y": 0,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_40",
+          "x": 1792,
+          "y": 1255,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_41",
+          "x": 2240,
+          "y": 1255,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_42",
+          "x": 2688,
+          "y": 1255,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_43",
+          "x": 0,
+          "y": 1506,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_44",
+          "x": 448,
+          "y": 1506,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_45",
+          "x": 896,
+          "y": 1506,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_46",
+          "x": 1344,
+          "y": 1506,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_47",
+          "x": 1792,
+          "y": 1506,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_5",
+          "x": 1792,
+          "y": 0,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_6",
+          "x": 2240,
+          "y": 0,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_7",
+          "x": 2688,
+          "y": 0,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_8",
+          "x": 0,
+          "y": 251,
+          "w": 448,
+          "h": 251
+        },
+        {
+          "nome": "voando_9",
+          "x": 448,
+          "y": 251,
+          "w": 448,
+          "h": 251
+        }
+      ],
+      "velocidade": "200",
+      "recompensa": "1000",
+      "alcanceTiro": 680,
+      "recargaTiro": 1200,
+      "velocidadePoder": 640,
+      "escalaPoder": 1.1,
+      "raioPoder": 110,
+      "intensidadePoder": 1.8,
+      "alcanceAtaque": 135,
+      "recargaAtaque": 900,
+      "corPoder": "#cc0000"
+    }
+  ],
+  "cenario": [
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": -1,
+      "y": 22,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 2495,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 4991,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 7487,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 9983,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 12479,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 14975,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 17471,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 19967,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 22463,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 24959,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_fase4",
+      "depth": 10,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 27455,
+      "y": 20,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "nave_resgate",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 21760,
+      "y": -8,
+      "seamless": false,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    }
+  ],
+  "colisoes": [
+    {
+      "x": 15002,
+      "y": 656,
+      "largura": 30000,
+      "altura": 125
+    }
+  ],
+  "zonasDano": [],
+  "zonasSeguras": [],
+  "gatilhos": [
+    {
+      "x": 4315,
+      "y": 346,
+      "largura": 219,
+      "altura": 455,
+      "acao": "spawn_grupo",
+      "audio": "",
+      "grupo": ""
+    },
+    {
+      "x": 8999,
+      "y": 383,
+      "largura": 192,
+      "altura": 398,
+      "acao": "spawn_grupo",
+      "audio": "",
+      "grupo": "horda_2"
+    },
+    {
+      "x": 5576,
+      "y": 392,
+      "largura": 306,
+      "altura": 338,
+      "acao": "queda_objeto",
+      "audio": "",
+      "grupo": "",
+      "quedaSpriteKey": "meteoro",
+      "quedaSpritePath": "C:\\Users\\Vanio\\Documents\\nova_horizon backup\\assets\\cenarios\\meteoro",
+      "quedaDano": 8,
+      "quedaVelocidade": 780,
+      "quedaEscala": 0.7,
+      "quedaOffsetX": 0,
+      "quedaAvisoMs": 50
+    },
+    {
+      "x": 11228,
+      "y": 398,
+      "largura": 306,
+      "altura": 338,
+      "acao": "queda_objeto",
+      "audio": "",
+      "grupo": "",
+      "quedaSpriteKey": "meteoro",
+      "quedaSpritePath": "C:\\Users\\Vanio\\Documents\\nova_horizon backup\\assets\\cenarios\\meteoro",
+      "quedaDano": 8,
+      "quedaVelocidade": 780,
+      "quedaEscala": 0.7,
+      "quedaOffsetX": 0,
+      "quedaAvisoMs": 50
+    },
+    {
+      "x": 15911,
+      "y": 402,
+      "largura": 306,
+      "altura": 338,
+      "acao": "queda_objeto",
+      "audio": "",
+      "grupo": "",
+      "quedaSpriteKey": "meteoro",
+      "quedaSpritePath": "C:\\Users\\Vanio\\Documents\\nova_horizon backup\\assets\\cenarios\\meteoro",
+      "quedaDano": 8,
+      "quedaVelocidade": 780,
+      "quedaEscala": 0.7,
+      "quedaOffsetX": 0,
+      "quedaAvisoMs": 50
+    },
+    {
+      "x": 16493,
+      "y": 409,
+      "largura": 306,
+      "altura": 338,
+      "acao": "queda_objeto",
+      "audio": "",
+      "grupo": "",
+      "quedaSpriteKey": "meteoro",
+      "quedaSpritePath": "C:\\Users\\Vanio\\Documents\\nova_horizon backup\\assets\\cenarios\\meteoro",
+      "quedaDano": 8,
+      "quedaVelocidade": 780,
+      "quedaEscala": 0.7,
+      "quedaOffsetX": 0,
+      "quedaAvisoMs": 50
+    },
+    {
+      "x": 18433,
+      "y": 391,
+      "largura": 306,
+      "altura": 338,
+      "acao": "queda_objeto",
+      "audio": "",
+      "grupo": "",
+      "quedaSpriteKey": "meteoro",
+      "quedaSpritePath": "C:\\Users\\Vanio\\Documents\\nova_horizon backup\\assets\\cenarios\\meteoro",
+      "quedaDano": 8,
+      "quedaVelocidade": 780,
+      "quedaEscala": 0.7,
+      "quedaOffsetX": 0,
+      "quedaAvisoMs": 50
+    }
+  ],
+  "luzes": [],
+  "spawns": [
+    {
+      "x": 2030,
+      "y": 207,
+      "inimigo": "lava",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "corPoder": "#ff3355",
+      "base": "tanque",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 3150,
+      "y": 218,
+      "inimigo": "lava",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "corPoder": "#ff3355",
+      "base": "tanque",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 3679,
+      "y": 169,
+      "inimigo": "lava",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "corPoder": "#ff3355",
+      "base": "tanque",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 4892,
+      "y": 201,
+      "inimigo": "lava",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "corPoder": "#ff3355",
+      "base": "tanque",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 7518,
+      "y": 180,
+      "inimigo": "lava",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "corPoder": "#ff3355",
+      "base": "tanque",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 11727,
+      "y": 170,
+      "inimigo": "lava",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "corPoder": "#ff3355",
+      "base": "tanque",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 12916,
+      "y": 182,
+      "inimigo": "lava",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "corPoder": "#ff3355",
+      "base": "tanque",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 6150,
+      "y": 190,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 7094,
+      "y": 179,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 7834,
+      "y": 191,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 9768,
+      "y": 199,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 8256,
+      "y": 198,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 7980,
+      "y": 200,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 10386,
+      "y": 222,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 10929,
+      "y": 221,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 14145,
+      "y": 138,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 14436,
+      "y": 311,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 15438,
+      "y": 254,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 16985,
+      "y": 214,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 18850,
+      "y": 256,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 18207,
+      "y": 167,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 19462,
+      "y": 297,
+      "inimigo": "dragon",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "parar_atirar",
+      "corPoder": "#bc0101",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 16281,
+      "y": 243,
+      "inimigo": "lava",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 20333,
+      "y": 200,
+      "inimigo": "lava",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_2",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "atlas_lava",
+      "atlasPng": "assets/personagens/atlas_lava_3.png",
+      "atlasJson": "assets/personagens/atlas_lava_3.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 1792,
+      "y": 241,
+      "inimigo": "dragon",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "1.3",
+      "comportamento": "parar_atirar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "atlas_dragon",
+      "atlasPng": "assets/personagens/atlas_dragon_2.png",
+      "atlasJson": "assets/personagens/atlas_dragon_2.json",
+      "animPrefix": "voando_"
+    }
+  ],
+  "itens": [],
+  "assetsParaCarregar": [
+    {
+      "tipo": "atlas",
+      "chave": "atlas_lava",
+      "caminho": "assets/personagens/atlas_lava_3.png",
+      "caminhoJson": "assets/personagens/atlas_lava_3.json"
+    },
+    {
+      "tipo": "atlas",
+      "chave": "atlas_dragon",
+      "caminho": "assets/personagens/atlas_dragon_2.png",
+      "caminhoJson": "assets/personagens/atlas_dragon_2.json"
+    },
+    {
+      "tipo": "image",
+      "chave": "chao_fase4",
+      "caminho": "assets/cenarios/chao_fase4.png"
+    },
+    {
+      "tipo": "image",
+      "chave": "nave_resgate",
+      "caminho": "assets/cenarios/nave_resgate_2.png"
+    },
+    {
+      "tipo": "video",
+      "chave": "fundo_video3",
+      "caminho": "assets/cenarios/fundo_video3.webm"
+    },
+    {
+      "tipo": "image",
+      "chave": "meteoro",
+      "caminho": "assets/cenarios/meteoro_2.png"
+    }
+  ],
+  "naveResgate": {
+    "x": 21624,
+    "y": 354,
+    "videoFuga": "",
+    "videoFugaCaminho": "assets/ui/video_fuga.webm"
+  }
+}

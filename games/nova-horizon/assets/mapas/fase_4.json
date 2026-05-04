@@ -1,0 +1,1157 @@
+{
+  "nomeFase": "fase_4",
+  "bioma": "solar",
+  "musica": "musica_fase_4",
+  "usarLanterna": false,
+  "zoomCamera": 0.7,
+  "danoClima": 0.2,
+  "larguraFase": 30000,
+  "alturaFase": 720,
+  "fundo": "fundo_deserto",
+  "fundoTipo": "image",
+  "aliensConfig": [
+    {
+      "id": "tatu",
+      "nome": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_",
+      "animFps": "70",
+      "frameCount": 37,
+      "frameWidth": 435,
+      "frameHeight": 244,
+      "fisica": "andar",
+      "comportamento": "andar_atacar",
+      "scale": "1",
+      "hp": "50",
+      "bodyWidth": 307,
+      "bodyHeight": 149,
+      "bodyOffsetX": 72,
+      "bodyOffsetY": 56,
+      "frames": [
+        {
+          "nome": "andando_1",
+          "x": 0,
+          "y": 0,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_10",
+          "x": 870,
+          "y": 244,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_11",
+          "x": 1305,
+          "y": 244,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_12",
+          "x": 1740,
+          "y": 244,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_13",
+          "x": 2175,
+          "y": 244,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_14",
+          "x": 2610,
+          "y": 244,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_15",
+          "x": 0,
+          "y": 488,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_16",
+          "x": 435,
+          "y": 488,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_17",
+          "x": 870,
+          "y": 488,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_18",
+          "x": 1305,
+          "y": 488,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_19",
+          "x": 1740,
+          "y": 488,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_2",
+          "x": 435,
+          "y": 0,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_20",
+          "x": 2175,
+          "y": 488,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_21",
+          "x": 2610,
+          "y": 488,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_22",
+          "x": 0,
+          "y": 732,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_23",
+          "x": 435,
+          "y": 732,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_24",
+          "x": 870,
+          "y": 732,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_25",
+          "x": 1305,
+          "y": 732,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_26",
+          "x": 1740,
+          "y": 732,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_27",
+          "x": 2175,
+          "y": 732,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_28",
+          "x": 2610,
+          "y": 732,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_29",
+          "x": 0,
+          "y": 976,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_3",
+          "x": 870,
+          "y": 0,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_30",
+          "x": 435,
+          "y": 976,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_31",
+          "x": 870,
+          "y": 976,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_32",
+          "x": 1305,
+          "y": 976,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_33",
+          "x": 1740,
+          "y": 976,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_34",
+          "x": 2175,
+          "y": 976,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_35",
+          "x": 2610,
+          "y": 976,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_36",
+          "x": 0,
+          "y": 1220,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_37",
+          "x": 435,
+          "y": 1220,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_4",
+          "x": 1305,
+          "y": 0,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_5",
+          "x": 1740,
+          "y": 0,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_6",
+          "x": 2175,
+          "y": 0,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_7",
+          "x": 2610,
+          "y": 0,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_8",
+          "x": 0,
+          "y": 244,
+          "w": 435,
+          "h": 244
+        },
+        {
+          "nome": "andando_9",
+          "x": 435,
+          "y": 244,
+          "w": 435,
+          "h": 244
+        }
+      ],
+      "velocidade": "550",
+      "recompensa": "1500",
+      "alcanceTiro": 680,
+      "recargaTiro": 1200,
+      "velocidadePoder": 640,
+      "escalaPoder": 1.1,
+      "raioPoder": 110,
+      "intensidadePoder": 1.8,
+      "alcanceAtaque": 135,
+      "recargaAtaque": 900
+    },
+    {
+      "id": "besouro",
+      "nome": "besouro",
+      "atlasKey": "atlas_besouro",
+      "atlasPng": "assets/personagens/atlas_besouro_2.png",
+      "atlasJson": "assets/personagens/atlas_besouro_2.json",
+      "animPrefix": "voando_",
+      "animFps": "600",
+      "frameCount": "36",
+      "frameWidth": 460,
+      "frameHeight": 259,
+      "scale": "0,8",
+      "hp": "73",
+      "bodyWidth": 223,
+      "bodyHeight": 160,
+      "bodyOffsetX": 160,
+      "bodyOffsetY": 44,
+      "frames": [
+        {
+          "nome": "voando_1",
+          "x": 0,
+          "y": 0,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_10",
+          "x": 1380,
+          "y": 259,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_11",
+          "x": 1840,
+          "y": 259,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_12",
+          "x": 2300,
+          "y": 259,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_13",
+          "x": 0,
+          "y": 518,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_14",
+          "x": 460,
+          "y": 518,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_15",
+          "x": 920,
+          "y": 518,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_16",
+          "x": 1380,
+          "y": 518,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_17",
+          "x": 1840,
+          "y": 518,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_18",
+          "x": 2300,
+          "y": 518,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_19",
+          "x": 0,
+          "y": 777,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_2",
+          "x": 460,
+          "y": 0,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_20",
+          "x": 460,
+          "y": 777,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_21",
+          "x": 920,
+          "y": 777,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_22",
+          "x": 1380,
+          "y": 777,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_23",
+          "x": 1840,
+          "y": 777,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_24",
+          "x": 2300,
+          "y": 777,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_25",
+          "x": 0,
+          "y": 1036,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_26",
+          "x": 460,
+          "y": 1036,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_27",
+          "x": 920,
+          "y": 1036,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_28",
+          "x": 1380,
+          "y": 1036,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_29",
+          "x": 1840,
+          "y": 1036,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_3",
+          "x": 920,
+          "y": 0,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_30",
+          "x": 2300,
+          "y": 1036,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_31",
+          "x": 0,
+          "y": 1295,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_32",
+          "x": 460,
+          "y": 1295,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_33",
+          "x": 920,
+          "y": 1295,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_34",
+          "x": 1380,
+          "y": 1295,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_35",
+          "x": 1840,
+          "y": 1295,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_36",
+          "x": 2300,
+          "y": 1295,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_4",
+          "x": 1380,
+          "y": 0,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_5",
+          "x": 1840,
+          "y": 0,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_6",
+          "x": 2300,
+          "y": 0,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_7",
+          "x": 0,
+          "y": 259,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_8",
+          "x": 460,
+          "y": 259,
+          "w": 460,
+          "h": 259
+        },
+        {
+          "nome": "voando_9",
+          "x": 920,
+          "y": 259,
+          "w": 460,
+          "h": 259
+        }
+      ],
+      "velocidade": "600",
+      "recompensa": "1500",
+      "alcanceTiro": 680,
+      "recargaTiro": 1200,
+      "velocidadePoder": 640,
+      "escalaPoder": 1.1,
+      "raioPoder": 110,
+      "intensidadePoder": 1.8,
+      "alcanceAtaque": 135,
+      "recargaAtaque": 900,
+      "tremorCaminhada": "nunca",
+      "fisica": "voar",
+      "comportamento": "parar_atirar",
+      "corPoder": "#fbff05"
+    }
+  ],
+  "cenario": [
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 0,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 2752,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 5504,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 8256,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 11008,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 13760,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 16512,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 19264,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 22016,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 24768,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "chao_deserto_2_2",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 27520,
+      "y": -43,
+      "seamless": true,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    },
+    {
+      "scrollFactor": 1,
+      "chave": "nave_resgate",
+      "depth": 15,
+      "escala": 1,
+      "alpha": 1,
+      "usarLuz": true,
+      "x": 17525,
+      "y": -16,
+      "seamless": false,
+      "animTipo": "nenhuma",
+      "animJson": "",
+      "animPrefix": "",
+      "animFps": 15
+    }
+  ],
+  "colisoes": [
+    {
+      "x": 15002,
+      "y": 648,
+      "largura": 30000,
+      "altura": 138
+    }
+  ],
+  "zonasDano": [],
+  "zonasSeguras": [],
+  "gatilhos": [
+    {
+      "x": 11000,
+      "y": 386,
+      "largura": 364,
+      "altura": 376,
+      "acao": "spawn_grupo",
+      "audio": "",
+      "grupo": ""
+    }
+  ],
+  "luzes": [],
+  "spawns": [
+    {
+      "x": 1754,
+      "y": 349,
+      "inimigo": "tatu",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "1",
+      "comportamento": "andar_atacar",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 2831,
+      "y": 254,
+      "inimigo": "tatu",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "1",
+      "comportamento": "andar_atacar",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 3771,
+      "y": 258,
+      "inimigo": "tatu",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "1",
+      "comportamento": "andar_atacar",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 5117,
+      "y": 279,
+      "inimigo": "tatu",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "andar_atacar",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 6887,
+      "y": 241,
+      "inimigo": "tatu",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "andar_atacar",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 8204,
+      "y": 229,
+      "inimigo": "tatu",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 9857,
+      "y": 200,
+      "inimigo": "tatu",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 8846,
+      "y": 307,
+      "inimigo": "tatu",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "andar_atacar",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 1386,
+      "y": 125,
+      "inimigo": "tatu",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "1",
+      "comportamento": "correr",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "tatu",
+      "atlasKey": "atlas_tatu",
+      "atlasPng": "assets/personagens/atlas_tatu_2.png",
+      "atlasJson": "assets/personagens/atlas_tatu_2.json",
+      "animPrefix": "andando_"
+    },
+    {
+      "x": 2133,
+      "y": 134,
+      "inimigo": "besouro",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "correr",
+      "fisica": "voar",
+      "corPoder": "#ff3355",
+      "base": "besouro",
+      "atlasKey": "atlas_besouro",
+      "atlasPng": "assets/personagens/atlas_besouro_2.png",
+      "atlasJson": "assets/personagens/atlas_besouro_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 2731,
+      "y": 161,
+      "inimigo": "besouro",
+      "ativacao": "imediato",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "2",
+      "comportamento": "correr",
+      "fisica": "voar",
+      "corPoder": "#ff3355",
+      "base": "besouro",
+      "atlasKey": "atlas_besouro",
+      "atlasPng": "assets/personagens/atlas_besouro_2.png",
+      "atlasJson": "assets/personagens/atlas_besouro_2.json",
+      "animPrefix": "voando_"
+    },
+    {
+      "x": 11877,
+      "y": 256,
+      "inimigo": "besouro",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": null,
+      "comportamento": "correr",
+      "fisica": "voar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "",
+      "atlasPng": "",
+      "atlasJson": "",
+      "animPrefix": "correndo_"
+    },
+    {
+      "x": 12403,
+      "y": 223,
+      "inimigo": "besouro",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "1",
+      "comportamento": "correr",
+      "fisica": "voar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "",
+      "atlasPng": "",
+      "atlasJson": "",
+      "animPrefix": "correndo_"
+    },
+    {
+      "x": 12981,
+      "y": 178,
+      "inimigo": "besouro",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "1",
+      "comportamento": "correr",
+      "fisica": "voar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "",
+      "atlasPng": "",
+      "atlasJson": "",
+      "animPrefix": "correndo_"
+    },
+    {
+      "x": 12734,
+      "y": 315,
+      "inimigo": "besouro",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "1",
+      "comportamento": "correr",
+      "fisica": "voar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "",
+      "atlasPng": "",
+      "atlasJson": "",
+      "animPrefix": "correndo_"
+    },
+    {
+      "x": 13935,
+      "y": 324,
+      "inimigo": "tatu",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": null,
+      "comportamento": "correr",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "",
+      "atlasPng": "",
+      "atlasJson": "",
+      "animPrefix": "correndo_"
+    },
+    {
+      "x": 14538,
+      "y": 309,
+      "inimigo": "tatu",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": null,
+      "comportamento": "correr",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "",
+      "atlasPng": "",
+      "atlasJson": "",
+      "animPrefix": "correndo_"
+    },
+    {
+      "x": 14924,
+      "y": 329,
+      "inimigo": "tatu",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": null,
+      "comportamento": "correr",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "",
+      "atlasPng": "",
+      "atlasJson": "",
+      "animPrefix": "correndo_"
+    },
+    {
+      "x": 15560,
+      "y": 204,
+      "inimigo": "tatu",
+      "ativacao": "espera_grupo",
+      "grupo": "horda_1",
+      "depth": 20,
+      "escala": "3",
+      "comportamento": "correr",
+      "fisica": "andar",
+      "corPoder": "#ff3355",
+      "base": "comum",
+      "atlasKey": "",
+      "atlasPng": "",
+      "atlasJson": "",
+      "animPrefix": "correndo_"
+    }
+  ],
+  "itens": [],
+  "rigs": [],
+  "assetsParaCarregar": [
+    {
+      "tipo": "atlas",
+      "chave": "atlas_tatu",
+      "caminho": "assets/personagens/atlas_tatu_2.png",
+      "caminhoJson": "assets/personagens/atlas_tatu_2.json"
+    },
+    {
+      "tipo": "atlas",
+      "chave": "atlas_besouro",
+      "caminho": "assets/personagens/atlas_besouro_2.png",
+      "caminhoJson": "assets/personagens/atlas_besouro_2.json"
+    },
+    {
+      "tipo": "image",
+      "chave": "chao_deserto_2_2",
+      "caminho": "assets/cenarios/chao_deserto_2_2.png"
+    },
+    {
+      "tipo": "image",
+      "chave": "nave_resgate",
+      "caminho": "assets/cenarios/nave_resgate_3.png"
+    },
+    {
+      "tipo": "image",
+      "chave": "fundo_deserto",
+      "caminho": "assets/cenarios/fundo_deserto_2.jpeg"
+    }
+  ],
+  "naveResgate": {
+    "x": 17394,
+    "y": 373,
+    "videoFuga": "",
+    "videoFugaCaminho": "assets/ui/video_fuga.webm"
+  }
+}

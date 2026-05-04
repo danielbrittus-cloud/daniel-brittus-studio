@@ -1,0 +1,573 @@
+{
+  "frames": {
+    "correndo_1": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_2": {
+      "frame": {
+        "x": 460,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_3": {
+      "frame": {
+        "x": 920,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_4": {
+      "frame": {
+        "x": 1380,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_5": {
+      "frame": {
+        "x": 1840,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_6": {
+      "frame": {
+        "x": 2300,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_7": {
+      "frame": {
+        "x": 0,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_8": {
+      "frame": {
+        "x": 460,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_9": {
+      "frame": {
+        "x": 920,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_10": {
+      "frame": {
+        "x": 1380,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_11": {
+      "frame": {
+        "x": 1840,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_12": {
+      "frame": {
+        "x": 2300,
+        "y": 259,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_13": {
+      "frame": {
+        "x": 0,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_14": {
+      "frame": {
+        "x": 460,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_15": {
+      "frame": {
+        "x": 920,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_16": {
+      "frame": {
+        "x": 1380,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_17": {
+      "frame": {
+        "x": 1840,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_18": {
+      "frame": {
+        "x": 2300,
+        "y": 518,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_19": {
+      "frame": {
+        "x": 0,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_20": {
+      "frame": {
+        "x": 460,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_21": {
+      "frame": {
+        "x": 920,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_22": {
+      "frame": {
+        "x": 1380,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_23": {
+      "frame": {
+        "x": 1840,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_24": {
+      "frame": {
+        "x": 2300,
+        "y": 777,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_25": {
+      "frame": {
+        "x": 0,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_26": {
+      "frame": {
+        "x": 460,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_27": {
+      "frame": {
+        "x": 920,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    },
+    "correndo_28": {
+      "frame": {
+        "x": 1380,
+        "y": 1036,
+        "w": 460,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 460,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 259
+      }
+    }
+  },
+  "meta": {
+    "app": "NovaHorizonForge",
+    "hitbox": {
+      "w": 226,
+      "h": 124,
+      "offX": 112,
+      "offY": 82
+    }
+  }
+}

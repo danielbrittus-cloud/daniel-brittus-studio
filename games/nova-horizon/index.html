@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Horizon</title>
+    <meta name="theme-color" content="#02060d">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2302060d'/%3E%3Cpath d='M32 8 54 56 32 45 10 56Z' fill='%2300e5ff'/%3E%3Cpath d='M32 17 43 43 32 37 21 43Z' fill='%23ffffff'/%3E%3C/svg%3E">
+    <script src="phaser.min.js"></script>
+    <style>
+        /* Estilo para centralizar o jogo na tela e dar um "glow" de ficção científica */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #030305; /* Fundo escuro do espaço */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        canvas {
+            box-shadow: 0 0 40px rgba(0, 200, 255, 0.15); /* Brilho neon sutil nas bordas */
+            border: 1px solid #111122;
+            border-radius: 4px;
+            image-rendering: auto;
+            filter: saturate(1.03) contrast(1.02);
+        }
+    </style>
+</head>
+<body>
+    <script src="src/cenas/MenuInicial.js"></script>
+    <script src="CenaLoja.js"></script>
+    <script src="src/cenas/CenaFase.js"></script>
+    <script src="src/cenas/CenaPausa.js"></script>
+    <script src="src/cenas/CenaCarregamento.js"></script>
+    <script src="CenaCutsceneFuga.js"></script>
+    <script src="src/main.js"></script>
+    
+</body>
+</html>

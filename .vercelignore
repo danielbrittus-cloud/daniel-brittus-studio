@@ -1,0 +1,9 @@
+/dist/
+/src/
+/vendor/
+/assets/data/
+/game.js
+/style.css
+/phaser.min.js
+dev-server.cjs
+*.zip
