@@ -1,11 +1,14 @@
+const isMobileShell = window.matchMedia('(pointer: coarse), (max-width: 820px)').matches;
+
 const config = {
     type: Phaser.AUTO,
     // O gerenciador de Escala é o segredo para o 16:9 perfeito
     scale: {
-        mode: Phaser.Scale.FIT, // Faz o jogo crescer/diminuir para caber na tela sem perder a proporção
+        mode: isMobileShell ? Phaser.Scale.ENVELOP : Phaser.Scale.FIT, // Mobile preenche a tela; desktop preserva tudo.
         autoCenter: Phaser.Scale.CENTER_BOTH, // Centraliza o jogo horizontalmente e verticalmente
         width: 1280,  // Largura (16)
-        height: 720   // Altura (9)
+        height: 720,   // Altura (9)
+        fullscreenTarget: document.documentElement
     },
     backgroundColor: '#000000',
     antialias: true,

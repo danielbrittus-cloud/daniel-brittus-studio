@@ -144,6 +144,9 @@
                 if (game && game.scale && !game.scale.isFullscreen) {
                     game.scale.startFullscreen({ navigationUI: 'hide' });
                 }
+                if (game && game.scale && game.scale.refresh) {
+                    game.scale.refresh();
+                }
             };
 
             const enterMobilePlay = async () => {
