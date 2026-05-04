@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Daniel Brittus cria jogos web arcade com visual forte, gameplay imediata e foco em browser, mobile e plataformas globais."
+    />
+    <title>Daniel Brittus Studio</title>
+    <link rel="preload" href="assets/menu.jpeg" as="image" />
+    <link rel="stylesheet" href="studio.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Daniel Brittus Studio">
+        <span>DB</span>
+        Daniel Brittus
+      </a>
+      <nav aria-label="Navegacao principal">
+        <a href="#games">Jogos</a>
+        <a href="#studio">Estudio</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">browser games / arcade / mobile-first</p>
+          <h1 id="hero-title">Daniel Brittus</h1>
+          <p class="hero-copy">
+            Jogos web com impacto visual, controles instantaneos e picos de satisfacao pensados para
+            plataformas globais.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="games/tower-build/">Jogar Tower Build</a>
+            <a class="secondary-action" href="#games">Ver portfolio</a>
+          </div>
+        </div>
+        <div class="hero-panel glass reveal">
+          <span>Featured build</span>
+          <strong>Tower Build</strong>
+          <p>Construa ate o espaco em uma torre infinita de timing, clima dinamico e combo perfeito.</p>
+        </div>
+      </section>
+
+      <section class="metrics reveal" aria-label="Destaques do estudio">
+        <article>
+          <span>01</span>
+          <strong>Web-ready</strong>
+          <p>HTML5 leve, responsivo e preparado para iframe, mobile e desktop.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>Arcade feel</strong>
+          <p>Loops curtos, feedback visual forte e dificuldade progressiva.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>Publisher mindset</strong>
+          <p>Projetos pensados para retencao, clareza e apresentacao profissional.</p>
+        </article>
+      </section>
+
+      <section id="games" class="showcase" aria-labelledby="games-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">primeiro lancamento</p>
+          <h2 id="games-title">Tower Build</h2>
+          <p>
+            Um arcade vertical de reflexo e precisao: solte casas, sustente a torre, enfrente clima,
+            alcance a Lua e continue subindo.
+          </p>
+        </div>
+        <div class="game-feature reveal">
+          <div class="game-frame glass">
+            <iframe
+              title="Tower Build jogavel"
+              src="games/tower-build/"
+              loading="lazy"
+              allow="autoplay; fullscreen; gamepad"
+            ></iframe>
+          </div>
+          <div class="game-info">
+            <div class="glass info-card">
+              <span>Status</span>
+              <strong>Playable HTML5 build</strong>
+              <p>Desktop, tablet e celular testados com controle por clique/toque.</p>
+            </div>
+            <div class="glass info-card">
+              <span>Pitch</span>
+              <strong>Timing + torre infinita</strong>
+              <p>Progressao visual ate o espaco, climas como desafio e ranking local.</p>
+            </div>
+            <a class="primary-action wide" href="games/tower-build/">Abrir em tela cheia</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="studio" class="studio-section" aria-labelledby="studio-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">direcao criativa</p>
+          <h2 id="studio-title">Jogos com leitura imediata e acabamento premium.</h2>
+        </div>
+        <div class="studio-grid">
+          <article class="glass reveal">
+            <img src="assets/casa_1.png" alt="Casa do jogo Tower Build" />
+            <h3>Gameplay clara</h3>
+            <p>O jogador entende em segundos, mas continua tentando superar a propria marca.</p>
+          </article>
+          <article class="glass reveal">
+            <img src="assets/lua.png" alt="Lua no percurso espacial do jogo" />
+            <h3>Progressao visual</h3>
+            <p>Cada trecho da subida muda o clima, o cenario e a sensacao de conquista.</p>
+          </article>
+          <article class="glass reveal">
+            <img src="assets/saturno.png" alt="Saturno no percurso espacial do jogo" />
+            <h3>Escala global</h3>
+            <p>Experiencias feitas para browser: rapidas de abrir, leves de jogar e faceis de publicar.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact glass reveal" aria-labelledby="contact-title">
+        <p class="eyebrow">publisher pitch</p>
+        <h2 id="contact-title">Proximo alvo: jogos web com padrao de plataforma global.</h2>
+        <p>
+          Daniel Brittus esta construindo um catalogo de jogos HTML5 com foco em mobile, retencao e
+          apresentacao pronta para publishers.
+        </p>
+        <a class="primary-action" href="mailto:contato@danielbrittus.com">Falar com o estudio</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>Daniel Brittus Studio</span>
+      <span>HTML5 games / Brazil</span>
+    </footer>
+
+    <script src="studio.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tower Build</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="game-root"></div>
+      <section id="start-menu" aria-label="Menu inicial">
+        <div class="menu-shade"></div>
+        <div class="menu-content">
+          <p>Torre infinita</p>
+          <h1>Tower Build</h1>
+          <button id="start-button" type="button">Jogar</button>
+          <button id="mute-button" type="button" aria-pressed="false">Som ligado</button>
+          <div class="menu-ranking" aria-label="Ranking local">
+            <span>Ranking local</span>
+            <ol id="menu-ranking-list"></ol>
+          </div>
+        </div>
+      </section>
+      <div id="hud" aria-live="polite">
+        <div class="hud-panel">
+          <span>Score</span>
+          <strong id="score-value">0</strong>
+        </div>
+        <div class="hud-panel">
+          <span>Altura</span>
+          <strong id="height-value">0 m</strong>
+        </div>
+        <div class="hud-panel">
+          <span>Combo</span>
+          <strong id="combo-value">x0</strong>
+        </div>
+        <div class="hud-panel weather">
+          <span id="weather-label">Cidade</span>
+          <strong id="weather-value">calmo</strong>
+        </div>
+      </div>
+      <section id="ranking" aria-label="Ranking local">
+        <header>
+          <span>Ranking local</span>
+          <button id="ranking-toggle" type="button" aria-expanded="true">Ocultar</button>
+        </header>
+        <ol id="ranking-list"></ol>
+      </section>
+      <div id="message">Clique ou aperte espaco para soltar</div>
+      <div id="game-over" class="hidden" role="dialog" aria-modal="true" aria-labelledby="game-over-title">
+        <div class="game-over-panel">
+          <span>Fim da rodada</span>
+          <h2 id="game-over-title">A torre desabou</h2>
+          <p id="game-over-reason">Aperte R ou clique para tentar de novo.</p>
+          <button id="restart-button" type="button">Reiniciar</button>
+        </div>
+      </div>
+    </div>
+    <script src="phaser.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
