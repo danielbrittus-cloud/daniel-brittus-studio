@@ -3,6 +3,9 @@ const glow = document.querySelector('.cursor-glow');
 const revealItems = document.querySelectorAll('.reveal');
 const LANGUAGE_STORAGE_KEY = 'db-language';
 const languageButtons = document.querySelectorAll('[data-lang]');
+const mobileGameShell = document.querySelector('#mobile-game-shell');
+const mobileGameFrame = document.querySelector('[data-mobile-game-frame]');
+const mobileGameClose = document.querySelector('.mobile-game-close');
 
 const portfolioCopy = {
   PT: {
@@ -129,3 +132,71 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+function isMobilePlaySurface() {
+  return window.matchMedia('(pointer: coarse), (max-width: 900px)').matches;
+}
+
+async function requestShellFullscreen() {
+  if (!mobileGameShell) {
+    return;
+  }
+
+  const request =
+    mobileGameShell.requestFullscreen ||
+    mobileGameShell.webkitRequestFullscreen ||
+    mobileGameShell.msRequestFullscreen;
+
+  if (!document.fullscreenElement && !document.webkitFullscreenElement && request) {
+    await request.call(mobileGameShell, { navigationUI: 'hide' });
+  }
+}
+
+async function lockLandscape() {
+  if (screen.orientation && screen.orientation.lock) {
+    await screen.orientation.lock('landscape');
+  }
+}
+
+function closeMobileGame() {
+  mobileGameShell?.classList.remove('is-active');
+  mobileGameShell?.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('mobile-game-open');
+
+  if (mobileGameFrame) {
+    mobileGameFrame.removeAttribute('src');
+  }
+
+  if (document.fullscreenElement && document.exitFullscreen) {
+    document.exitFullscreen().catch(() => {});
+  }
+}
+
+document.querySelectorAll('[data-mobile-play="nova-horizon"]').forEach((link) => {
+  link.addEventListener('click', async (event) => {
+    if (!isMobilePlaySurface() || !mobileGameShell || !mobileGameFrame) {
+      return;
+    }
+
+    event.preventDefault();
+    mobileGameShell.classList.add('is-active');
+    mobileGameShell.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('mobile-game-open');
+
+    try {
+      await requestShellFullscreen();
+    } catch (error) {
+      console.info('Fullscreen indisponivel neste navegador.', error);
+    }
+
+    try {
+      await lockLandscape();
+    } catch (error) {
+      console.info('Bloqueio de orientacao indisponivel neste navegador.', error);
+    }
+
+    mobileGameFrame.src = `${link.href}?embedded=1`;
+  });
+});
+
+mobileGameClose?.addEventListener('click', closeMobileGame);

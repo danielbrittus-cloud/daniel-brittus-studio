@@ -107,7 +107,11 @@
         (() => {
             const isMobile = window.matchMedia('(pointer: coarse), (max-width: 820px)').matches;
             const gate = document.getElementById('mobile-landscape-gate');
-            if (!isMobile || !gate) return;
+            const isEmbedded = new URLSearchParams(window.location.search).get('embedded') === '1';
+            if (isEmbedded) {
+                document.body.classList.add('mobile-fullscreen-mode');
+            }
+            if (!isMobile || !gate || isEmbedded) return;
 
             const dictionary = {
                 PT: {

@@ -26,6 +26,10 @@ body {
     linear-gradient(135deg, #07080c 0%, #111318 44%, #06070a 100%);
 }
 
+body.mobile-game-open {
+  overflow: hidden;
+}
+
 body::before {
   position: fixed;
   inset: 0;
@@ -517,6 +521,43 @@ footer {
   color: rgba(244, 247, 251, 0.54);
   font-size: 0.9rem;
   font-weight: 700;
+}
+
+.mobile-game-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  overflow: hidden;
+  background: #000;
+}
+
+.mobile-game-shell.is-active {
+  display: block;
+}
+
+.mobile-game-shell iframe {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  border: 0;
+  background: #000;
+}
+
+.mobile-game-close {
+  position: fixed;
+  top: max(10px, env(safe-area-inset-top));
+  right: max(10px, env(safe-area-inset-right));
+  z-index: 101;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.44);
+  color: #fff;
+  font-weight: 950;
 }
 
 .reveal {

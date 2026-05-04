@@ -56,7 +56,7 @@
                 <span>Sci-fi / Action</span>
                 <h2>Nova Horizon</h2>
                 <p data-i18n="novaCardCopy">Defenda setores hostis, evolua seu arsenal e avance por fases desbloqueaveis.</p>
-                <a class="primary-action" href="games/nova-horizon/" data-i18n="playButton">Jogar</a>
+                <a class="primary-action" href="games/nova-horizon/" data-i18n="playButton" data-mobile-play="nova-horizon">Jogar</a>
               </div>
             </article>
           </div>
@@ -120,6 +120,16 @@
       <span>Daniel Brittus Studio</span>
       <span>HTML5 games / Brazil</span>
     </footer>
+
+    <div id="mobile-game-shell" class="mobile-game-shell" aria-hidden="true">
+      <button class="mobile-game-close" type="button" aria-label="Fechar">X</button>
+      <iframe
+        title="Nova Horizon"
+        data-mobile-game-frame
+        allow="fullscreen; autoplay; gamepad"
+        allowfullscreen
+      ></iframe>
+    </div>
 
     <script src="studio.js"></script>
   </body>
