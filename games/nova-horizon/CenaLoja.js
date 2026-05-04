@@ -94,17 +94,44 @@ class CenaLoja extends Phaser.Scene {
         });
 
         // Botão de jogar puxando a tradução
-        let btnJogar = this.add.text(1200, 50, this.t.btnIniciar, { 
-            fontSize: '20px', fill: '#ff4444', fontStyle: 'bold' 
-        }).setOrigin(1, 0.5).setInteractive();
-            
-        btnJogar.on('pointerdown', () => {
+        const iniciarCacada = () => {
             this.menuTravado = true;
             if (this.lojaTravada) return; 
             this.scene.start('CenaCarregamento', { planetaDestino: this.planetaDestino, cicloAtual: this.cicloAtual }); 
+        };
+
+        let btnJogarContainer = this.add.container(640, 622).setDepth(100);
+        let brilhoBtnJogar = this.add.rectangle(0, 0, 456, 76, 0x00ffff, 0.1)
+            .setStrokeStyle(2, 0x00ffff, 0.65);
+        let fundoBtnJogar = this.add.rectangle(0, 0, 424, 60, 0x070c16, 0.96)
+            .setStrokeStyle(3, 0xff4444, 0.95)
+            .setInteractive({ useHandCursor: true });
+        let textoBtnJogar = this.add.text(0, 0, this.t.btnIniciar, {
+            fontFamily: '"Courier New", monospace',
+            fontSize: '28px',
+            fill: '#ffffff',
+            fontStyle: 'bold',
+            stroke: '#ff2222',
+            strokeThickness: 4
+        }).setOrigin(0.5);
+
+        btnJogarContainer.add([brilhoBtnJogar, fundoBtnJogar, textoBtnJogar]);
+
+        fundoBtnJogar.on('pointerover', () => {
+            fundoBtnJogar.setFillStyle(0x111d2f, 1);
+            brilhoBtnJogar.setAlpha(0.22);
+            this.tweens.add({ targets: btnJogarContainer, scale: 1.04, duration: 120, ease: 'Power2' });
         });
 
-        this.botoesInterativos.push(btnJogar); 
+        fundoBtnJogar.on('pointerout', () => {
+            fundoBtnJogar.setFillStyle(0x070c16, 0.96);
+            brilhoBtnJogar.setAlpha(1);
+            this.tweens.add({ targets: btnJogarContainer, scale: 1, duration: 120, ease: 'Power2' });
+        });
+
+        fundoBtnJogar.on('pointerdown', iniciarCacada);
+
+        this.botoesInterativos.push(fundoBtnJogar); 
 
         // --- O NOVO CURSOR VIRTUAL (MIRA DO CONTROLE) ---
         this.cursorVirtual = this.add.graphics();
