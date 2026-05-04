@@ -166,10 +166,8 @@ class MenuInicial extends Phaser.Scene {
             fill: '#a7c7d8'
         }).setOrigin(0.5);
 
-        const desbloquearTodasFasesTeste = true;
-        let nivelLiberado = desbloquearTodasFasesTeste
-            ? 99
-            : (parseInt(localStorage.getItem('fase_liberada')) || 1);
+        const nivelLiberadoSalvo = parseInt(localStorage.getItem('fase_liberada'), 10);
+        let nivelLiberado = Number.isFinite(nivelLiberadoSalvo) ? nivelLiberadoSalvo : 1;
 
         const criarCardFase = (posX, posY, chaveImg, tituloFase, nivelNecessario, planetaNome, ciclo) => {
             let liberada = nivelLiberado >= nivelNecessario;

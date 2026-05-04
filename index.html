@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Daniel Brittus cria jogos web arcade com visual forte, gameplay imediata e foco em browser, mobile e plataformas globais."
+      content="Portfolio de jogos HTML5 do Daniel Brittus Studio, com experiencias arcade prontas para browser, mobile e publishers."
     />
     <title>Daniel Brittus Studio</title>
     <link rel="preload" href="assets/menu.jpeg" as="image" />
@@ -16,7 +16,7 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Daniel Brittus Studio">
         <span>DB</span>
-        Daniel Brittus
+        DB Studio
       </a>
       <nav aria-label="Navegacao principal">
         <a href="#games">Jogos</a>
@@ -30,21 +30,32 @@
         <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow">browser games / arcade / mobile-first</p>
-          <h1 id="hero-title">Daniel Brittus</h1>
+          <p class="eyebrow">HTML5 games / arcade / mobile-first</p>
+          <h1 id="hero-title">Escolha seu jogo</h1>
           <p class="hero-copy">
-            Jogos web com impacto visual, controles instantaneos e picos de satisfacao pensados para
+            Dois projetos jogaveis logo de cara, feitos para browser, celular e apresentacao para
             plataformas globais.
           </p>
-          <div class="hero-actions">
-            <a class="primary-action" href="games/tower-build/">Jogar Tower Build</a>
-            <a class="secondary-action" href="#games">Ver portfolio</a>
+          <div class="hero-play-grid reveal">
+            <article class="game-card hero-game-card glass">
+              <img src="assets/screenshot3.PNG" alt="Tower Build no espaco" />
+              <div>
+                <span>Arcade / Timing</span>
+                <h2>Tower Build</h2>
+                <p>Construa uma torre infinita, enfrente climas e suba da cidade ate o espaco.</p>
+                <a class="primary-action" href="games/tower-build/">Jogar</a>
+              </div>
+            </article>
+            <article class="game-card hero-game-card glass">
+              <img src="games/nova-horizon/assets/ui/4.webp" alt="Nova Horizon em destaque" />
+              <div>
+                <span>Sci-fi / Action</span>
+                <h2>Nova Horizon</h2>
+                <p>Defenda setores hostis, evolua seu arsenal e avance por fases desbloqueaveis.</p>
+                <a class="primary-action" href="games/nova-horizon/">Jogar</a>
+              </div>
+            </article>
           </div>
-        </div>
-        <div class="hero-panel glass reveal">
-          <span>Featured build</span>
-          <strong>Tower Build</strong>
-          <p>Construa ate o espaco em uma torre infinita de timing, clima dinamico e combo perfeito.</p>
         </div>
       </section>
 
@@ -68,39 +79,16 @@
 
       <section id="games" class="showcase" aria-labelledby="games-title">
         <div class="section-heading reveal">
-          <p class="eyebrow">primeiro lancamento</p>
-          <h2 id="games-title">Tower Build</h2>
+          <p class="eyebrow">catalogo jogavel</p>
+          <h2 id="games-title">Jogos prontos para testar.</h2>
           <p>
-            O catalogo Daniel Brittus com jogos HTML5 prontos para browser, mobile e pitch para
-            plataformas globais.
+            Clique em jogar para abrir cada experiencia no tamanho certo, sem demo pequena travada na
+            landing page.
           </p>
-        </div>
-        <div class="game-feature reveal">
-          <div class="game-frame glass">
-            <iframe
-              title="Tower Build jogavel"
-              src="games/tower-build/"
-              loading="lazy"
-              allow="autoplay; fullscreen; gamepad"
-            ></iframe>
-          </div>
-          <div class="game-info">
-            <div class="glass info-card">
-              <span>Status</span>
-              <strong>Playable HTML5 build</strong>
-              <p>Desktop, tablet e celular testados com controle por clique/toque.</p>
-            </div>
-            <div class="glass info-card">
-              <span>Pitch</span>
-              <strong>Timing + torre infinita</strong>
-              <p>Progressao visual ate o espaco, climas como desafio e ranking local.</p>
-            </div>
-            <a class="primary-action wide" href="games/tower-build/">Abrir em tela cheia</a>
-          </div>
         </div>
         <div class="catalog-grid reveal">
           <article class="game-card glass">
-            <img src="assets/menu.jpeg" alt="Tower Build em destaque" />
+            <img src="assets/screenshot1.PNG" alt="Tower Build na area de predios" />
             <div>
               <span>Arcade / Timing</span>
               <h3>Tower Build</h3>
@@ -122,24 +110,24 @@
 
       <section id="studio" class="studio-section" aria-labelledby="studio-title">
         <div class="section-heading reveal">
-          <p class="eyebrow">direcao criativa</p>
-          <h2 id="studio-title">Jogos com leitura imediata e acabamento premium.</h2>
+          <p class="eyebrow">screenshots</p>
+          <h2 id="studio-title">Momentos do Tower Build em progresso real.</h2>
         </div>
         <div class="studio-grid">
           <article class="glass reveal">
-            <img src="assets/casa_1.png" alt="Casa do jogo Tower Build" />
-            <h3>Gameplay clara</h3>
-            <p>O jogador entende em segundos, mas continua tentando superar a propria marca.</p>
+            <img src="assets/screenshot1.PNG" alt="Tower Build com predios ao fundo" />
+            <h3>Cidade</h3>
+            <p>Inicio direto, leitura clara e desafio de alinhamento desde os primeiros blocos.</p>
           </article>
           <article class="glass reveal">
-            <img src="assets/lua.png" alt="Lua no percurso espacial do jogo" />
-            <h3>Progressao visual</h3>
-            <p>Cada trecho da subida muda o clima, o cenario e a sensacao de conquista.</p>
+            <img src="assets/screenshot2.PNG" alt="Tower Build com vento e aviao no ceu" />
+            <h3>Ceu turbulento</h3>
+            <p>Climas e elementos de cena mudam a sensacao de altura sem poluir a jogabilidade.</p>
           </article>
           <article class="glass reveal">
-            <img src="assets/saturno.png" alt="Saturno no percurso espacial do jogo" />
-            <h3>Escala global</h3>
-            <p>Experiencias feitas para browser: rapidas de abrir, leves de jogar e faceis de publicar.</p>
+            <img src="assets/screenshot3.PNG" alt="Tower Build chegando ao espaco com a lua" />
+            <h3>Espaco</h3>
+            <p>O objetivo longo vira recompensa visual, com picos de satisfacao na progressao.</p>
           </article>
         </div>
       </section>

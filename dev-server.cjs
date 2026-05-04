@@ -10,7 +10,11 @@ const types = {
   '.js': 'text/javascript; charset=utf-8',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg'
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.webm': 'video/webm',
+  '.mp3': 'audio/mpeg',
+  '.json': 'application/json; charset=utf-8'
 };
 
 http
