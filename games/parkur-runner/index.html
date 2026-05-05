@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parkur Runner</title>
+    <link rel="stylesheet" href="styles.css?v=19" />
+  </head>
+  <body>
+    <main id="shell" aria-label="Parkur Runner">
+      <div id="gameRoot"></div>
+
+      <section id="hud" aria-live="polite">
+        <div class="meter">
+          <span>PONTOS</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="meter">
+          <span>RITMO</span>
+          <strong id="speed">1.0x</strong>
+        </div>
+        <div class="meter">
+          <span>RECORDE</span>
+          <strong id="best">0</strong>
+        </div>
+      </section>
+
+      <section id="panel" class="panel is-visible">
+        <div class="panel-inner menu-panel">
+          <h1><span>Parkur</span> Runner</h1>
+          <div class="actions">
+            <button id="startButton" class="primary play-button" type="button" aria-label="Jogar">&#9658;</button>
+            <button id="fullscreenButton" class="fullscreen-button" type="button">Jogar em tela cheia</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="gameOver" class="panel">
+        <div id="celebrationLayer" class="celebration-layer" aria-hidden="true"></div>
+        <div class="panel-inner compact result-panel">
+          <p class="eyebrow">voce chegou ate</p>
+          <h2 id="finalScore">0</h2>
+          <p class="result-label">pontos</p>
+          <div class="actions">
+            <button id="restartButton" class="primary" type="button">Tentar novamente</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="phaser.min.js?v=19"></script>
+    <script src="game.js?v=19"></script>
+  </body>
+</html>
