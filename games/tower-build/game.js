@@ -779,56 +779,10 @@ class GameScene extends Phaser.Scene {
   }
 
   createScreenFx() {
-    this.colorGrade = this.add.graphics().setScrollFactor(0).setDepth(32);
-    this.colorGrade.setBlendMode(Phaser.BlendModes.SCREEN);
     this.fxLayer = this.add.graphics().setScrollFactor(0).setDepth(34);
     this.vignette = this.add.graphics().setScrollFactor(0).setDepth(33);
     this.encouragementLayer = this.add.container(0, 0).setScrollFactor(0).setDepth(37);
-    this.applyCameraFilters();
     this.drawVignette(0.16);
-  }
-
-  applyCameraFilters() {
-    const postFx = this.cameras.main.postFX;
-
-    if (!postFx) {
-      return;
-    }
-
-    try {
-      if (postFx.addBloom) {
-        this.cameraBloom = postFx.addBloom(0xf8f3d8, 1, 1, 1.05, 0.12, 4);
-      }
-
-      if (postFx.addVignette) {
-        this.cameraVignette = postFx.addVignette(0.5, 0.5, 0.78, 0.22);
-      }
-    } catch (error) {
-      this.cameraBloom = undefined;
-      this.cameraVignette = undefined;
-    }
-  }
-
-  drawAtmosphericFilter(stage) {
-    if (!this.colorGrade || !stage) {
-      return;
-    }
-
-    const spaceAlpha = stage.minHeight >= 1960 ? 0.08 : 0.055;
-    const groundAlpha = stage.minHeight >= 1240 ? 0.1 : 0.075;
-
-    this.colorGrade.clear();
-    this.colorGrade.fillGradientStyle(
-      stage.skyTop,
-      stage.skyTop,
-      stage.skyBottom,
-      stage.skyBottom,
-      spaceAlpha,
-      spaceAlpha,
-      groundAlpha,
-      groundAlpha
-    );
-    this.colorGrade.fillRect(0, 0, this.scale.width, this.scale.height);
   }
 
   drawVignette(alpha) {
@@ -1288,7 +1242,6 @@ class GameScene extends Phaser.Scene {
     this.sky.clear();
     this.sky.fillGradientStyle(stage.skyTop, stage.skyTop, stage.skyBottom, stage.skyBottom, 1);
     this.sky.fillRect(0, 0, this.scale.width, this.scale.height);
-    this.drawAtmosphericFilter(stage);
 
     if (stage.minHeight >= 1960) {
       this.drawStars();
