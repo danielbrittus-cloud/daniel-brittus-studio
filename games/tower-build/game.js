@@ -1,5 +1,6 @@
 const WORLD_WIDTH = 1800;
 const GROUND_Y = 840;
+const GROUND_COLLISION_Y = GROUND_Y + 18;
 const WORLD_TOP = GROUND_Y - 40000;
 const BLOCK_WIDTH = 168;
 const BLOCK_HEIGHT = 94;
@@ -175,7 +176,6 @@ const HOUSE_ASSETS = [
 ];
 
 const WORLD_LAYER_ASSETS = [
-  { key: 'crane-tower', url: 'guindaste.png' },
   { key: 'crane-cable', url: 'cabo_guindaste.png' },
   { key: 'cloud', url: 'nuvem.png' },
   { key: 'buildings', url: 'predios.png' },
@@ -696,16 +696,6 @@ class GameScene extends Phaser.Scene {
 
   createBackdrop() {
     this.cityLayer.clear();
-    this.cityLayer.fillStyle(0x74a9c7, 0.34);
-
-    for (let i = 0; i < 16; i += 1) {
-      const width = 70 + (i % 4) * 30;
-      const height = 160 + (i % 5) * 38;
-      const x = i * 116 + 10;
-      this.cityLayer.fillRect(x, GROUND_Y - height, width, height);
-      this.cityLayer.fillTriangle(x + width * 0.5, GROUND_Y - height - 54, x, GROUND_Y - height, x + width, GROUND_Y - height);
-    }
-
     this.drawConstructionGround();
   }
 
@@ -771,11 +761,10 @@ class GameScene extends Phaser.Scene {
 
   createCrane() {
     this.updateCraneAnchor();
-    this.crane = this.add.container(this.anchor.x, this.anchor.y).setDepth(15);
-    this.mast = this.add.image(0, 0, 'crane-tower').setOrigin(0.5, 0).setAlpha(0.98);
+    this.crane = this.add.container(this.anchor.x, this.anchor.y).setDepth(7);
     this.cable = this.add.image(CABLE_LOCAL_X, 34, 'crane-cable').setOrigin(0.5, 0).setDisplaySize(82, 160);
     this.hook = this.add.circle(CABLE_LOCAL_X, 190, 5, 0xffffff, 0);
-    this.crane.add([this.mast, this.cable, this.hook]);
+    this.crane.add([this.cable, this.hook]);
   }
 
   createParticles() {
@@ -790,10 +779,56 @@ class GameScene extends Phaser.Scene {
   }
 
   createScreenFx() {
+    this.colorGrade = this.add.graphics().setScrollFactor(0).setDepth(32);
+    this.colorGrade.setBlendMode(Phaser.BlendModes.SCREEN);
     this.fxLayer = this.add.graphics().setScrollFactor(0).setDepth(34);
     this.vignette = this.add.graphics().setScrollFactor(0).setDepth(33);
     this.encouragementLayer = this.add.container(0, 0).setScrollFactor(0).setDepth(37);
+    this.applyCameraFilters();
     this.drawVignette(0.16);
+  }
+
+  applyCameraFilters() {
+    const postFx = this.cameras.main.postFX;
+
+    if (!postFx) {
+      return;
+    }
+
+    try {
+      if (postFx.addBloom) {
+        this.cameraBloom = postFx.addBloom(0xf8f3d8, 1, 1, 1.05, 0.12, 4);
+      }
+
+      if (postFx.addVignette) {
+        this.cameraVignette = postFx.addVignette(0.5, 0.5, 0.78, 0.22);
+      }
+    } catch (error) {
+      this.cameraBloom = undefined;
+      this.cameraVignette = undefined;
+    }
+  }
+
+  drawAtmosphericFilter(stage) {
+    if (!this.colorGrade || !stage) {
+      return;
+    }
+
+    const spaceAlpha = stage.minHeight >= 1960 ? 0.08 : 0.055;
+    const groundAlpha = stage.minHeight >= 1240 ? 0.1 : 0.075;
+
+    this.colorGrade.clear();
+    this.colorGrade.fillGradientStyle(
+      stage.skyTop,
+      stage.skyTop,
+      stage.skyBottom,
+      stage.skyBottom,
+      spaceAlpha,
+      spaceAlpha,
+      groundAlpha,
+      groundAlpha
+    );
+    this.colorGrade.fillRect(0, 0, this.scale.width, this.scale.height);
   }
 
   drawVignette(alpha) {
@@ -879,12 +914,8 @@ class GameScene extends Phaser.Scene {
     const swing = Math.sin(this.swingPhase) * swingRange;
     const sway = Math.cos(this.swingPhase * 1.6) * 7;
     const hookY = 152 + Math.abs(Math.sin(this.swingPhase)) * 18;
-    const mastHeight = Math.max(560, this.scale.height + 70);
-    const mastWidth = mastHeight * (368 / 720);
 
     this.crane.setPosition(this.anchor.x, this.anchor.y);
-    this.mast.setDisplaySize(mastWidth, mastHeight);
-    this.mast.setPosition(8, -18);
     this.hook.setPosition(CABLE_LOCAL_X + swing, hookY);
     this.cable.setPosition(CABLE_LOCAL_X + swing, 24);
     this.cable.setDisplaySize(72, Math.max(132, hookY + 20));
@@ -1090,7 +1121,7 @@ class GameScene extends Phaser.Scene {
 
   getLandingY(block) {
     const previous = this.getPreviousScoredBlock(block);
-    return previous ? previous.scoredY - BLOCK_STACK_STEP : GROUND_Y - BLOCK_HEIGHT * 0.5;
+    return previous ? previous.scoredY - BLOCK_STACK_STEP : GROUND_COLLISION_Y - BLOCK_HEIGHT * 0.5;
   }
 
   getLandingOverlap(block) {
@@ -1257,6 +1288,7 @@ class GameScene extends Phaser.Scene {
     this.sky.clear();
     this.sky.fillGradientStyle(stage.skyTop, stage.skyTop, stage.skyBottom, stage.skyBottom, 1);
     this.sky.fillRect(0, 0, this.scale.width, this.scale.height);
+    this.drawAtmosphericFilter(stage);
 
     if (stage.minHeight >= 1960) {
       this.drawStars();
