@@ -268,6 +268,14 @@ class CenaFase extends Phaser.Scene {
             });
             this.registrarElementoHUDDinamico(this.joystick.base);
             this.registrarElementoHUDDinamico(this.joystick.thumb);
+            this.joystickMovimento = {
+                pointerId: null,
+                x: 0,
+                y: 0,
+                centroX: 112,
+                centroY: 585,
+                raio: 72
+            };
 
             // JOYSTICK DIREITO (PULO): Invisível, nasce onde o dedo encostar!
             this.joystickPulo = this.plugins.get('rexvirtualjoystickplugin').add(this, {
@@ -289,8 +297,11 @@ class CenaFase extends Phaser.Scene {
         this.usandoGamepadParaMirar = false;
         
         // Se o jogador mexer o mouse na mesa, o jogo destrava o analógico e volta pro PC
-        this.input.on('pointermove', () => {
+        this.input.on('pointermove', (pointer) => {
             this.usandoGamepadParaMirar = false;
+            if (!isDesktop) {
+                this.atualizarJoystickMovimento(pointer);
+            }
         });
 
         this.input.on('pointerdown', (pointer) => {
@@ -299,6 +310,11 @@ class CenaFase extends Phaser.Scene {
             if (isDesktop) {
                 this.atirar();
             } else {
+                if (pointer.x <= 360) {
+                    this.ativarJoystickMovimento(pointer);
+                    return;
+                }
+
                 // No Mobile: Tocou na metade DIREITA da tela?
                 if (pointer.x > 640) {
                     // 1. Reposiciona o joystick invisível para ler o arrasto do pulo
@@ -309,6 +325,18 @@ class CenaFase extends Phaser.Scene {
                     this.atirar();
                 }
             }
+        });
+        this.input.on('pointerup', (pointer) => this.soltarJoystickMovimento(pointer));
+        this.input.on('pointerupoutside', (pointer) => this.soltarJoystickMovimento(pointer));
+
+        this.resetJoystickAoPerderFoco = () => this.resetarJoystickMovimento();
+        window.addEventListener('blur', this.resetJoystickAoPerderFoco);
+        document.addEventListener('visibilitychange', this.resetJoystickAoPerderFoco);
+        this.game.canvas.addEventListener('pointercancel', this.resetJoystickAoPerderFoco);
+        this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
+            window.removeEventListener('blur', this.resetJoystickAoPerderFoco);
+            document.removeEventListener('visibilitychange', this.resetJoystickAoPerderFoco);
+            this.game.canvas.removeEventListener('pointercancel', this.resetJoystickAoPerderFoco);
         });
 
         this.somTiro = this.sound.add('som_tiro', { volume: 0.8 });
@@ -912,6 +940,66 @@ class CenaFase extends Phaser.Scene {
         alvo._fxProfundidadeFundoAplicado = true;
     }
 
+    ativarJoystickMovimento(pointer) {
+        if (!this.joystickMovimento) return;
+        this.joystickMovimento.pointerId = pointer.id;
+        this.atualizarJoystickMovimento(pointer);
+    }
+
+    atualizarJoystickMovimento(pointer) {
+        if (!this.joystickMovimento || this.joystickMovimento.pointerId !== pointer.id) return;
+
+        const estado = this.joystickMovimento;
+        const dx = pointer.x - estado.centroX;
+        const dy = pointer.y - estado.centroY;
+        const distancia = Math.min(Math.sqrt(dx * dx + dy * dy), estado.raio);
+        const angulo = Math.atan2(dy, dx);
+        const xNormalizado = distancia > 0 ? Math.cos(angulo) * (distancia / estado.raio) : 0;
+        const yNormalizado = distancia > 0 ? Math.sin(angulo) * (distancia / estado.raio) : 0;
+
+        estado.x = Math.abs(xNormalizado) < 0.12 ? 0 : xNormalizado;
+        estado.y = Math.abs(yNormalizado) < 0.12 ? 0 : yNormalizado;
+
+        if (this.joystick?.thumb) {
+            this.joystick.thumb.setPosition(
+                estado.centroX + Math.cos(angulo) * distancia,
+                estado.centroY + Math.sin(angulo) * distancia
+            );
+        }
+    }
+
+    soltarJoystickMovimento(pointer) {
+        if (!this.joystickMovimento) return;
+        if (!pointer || this.joystickMovimento.pointerId === pointer.id) {
+            this.resetarJoystickMovimento();
+        }
+    }
+
+    resetarJoystickMovimento() {
+        if (!this.joystickMovimento) return;
+
+        this.joystickMovimento.pointerId = null;
+        this.joystickMovimento.x = 0;
+        this.joystickMovimento.y = 0;
+
+        if (this.joystick?.thumb) {
+            this.joystick.thumb.setPosition(this.joystickMovimento.centroX, this.joystickMovimento.centroY);
+        }
+    }
+
+    validarJoystickMovimentoAtivo() {
+        if (!this.joystickMovimento || this.joystickMovimento.pointerId === null) return;
+
+        const ponteiros = [this.input.activePointer, ...(this.input.manager?.pointers || [])];
+        const aindaPressionado = ponteiros.some((pointer) =>
+            pointer && pointer.id === this.joystickMovimento.pointerId && pointer.isDown
+        );
+
+        if (!aindaPressionado) {
+            this.resetarJoystickMovimento();
+        }
+    }
+
     update(time) {
         if (this.venceuFase) return; 
         this.atualizarTexturaFundoVideo(time);
@@ -1121,11 +1209,20 @@ class CenaFase extends Phaser.Scene {
         let pulando = this.teclas.up.isDown || this.teclasWASD.up.isDown;
         let nadandoBaixo = this.teclas.down.isDown || this.teclasWASD.down.isDown;
 
-        if (!isDesktop && this.joystick) {
-            let joyKeys = this.joystick.createCursorKeys();
-            movendoEsquerda = movendoEsquerda || joyKeys.left.isDown; movendoDireita = movendoDireita || joyKeys.right.isDown;
-            nadandoBaixo = nadandoBaixo || joyKeys.down.isDown;
-            if (this.joystick.force > 0) anguloMira = this.joystick.rotation;
+        if (!isDesktop && this.joystickMovimento) {
+            this.validarJoystickMovimentoAtivo();
+            const eixoJoystick = this.joystickMovimento;
+            const zonaMorta = 0.18;
+            const usandoJoystick = Math.abs(eixoJoystick.x) > zonaMorta || Math.abs(eixoJoystick.y) > zonaMorta;
+
+            movendoEsquerda = movendoEsquerda || eixoJoystick.x < -zonaMorta;
+            movendoDireita = movendoDireita || eixoJoystick.x > zonaMorta;
+            nadandoBaixo = nadandoBaixo || eixoJoystick.y > 0.38;
+
+            if (usandoJoystick) {
+                anguloMira = Math.atan2(eixoJoystick.y, eixoJoystick.x);
+            }
+
             if (this.joystickPulo) pulando = pulando || this.joystickPulo.createCursorKeys().up.isDown;
         }
 
