@@ -54,14 +54,16 @@
   const fullscreenButton = document.getElementById("fullscreenButton");
   const restartButton = document.getElementById("restartButton");
 
+  const VISUAL_PROGRESS_STEP = 620;
   const districts = [
-    { name: "RUA BAIXA", at: 0, color: 0x73e4ff, accent: 0xffd35c },
-    { name: "BECO NEON", at: 650, color: 0xffd35c, accent: 0x73e4ff },
-    { name: "TELHADOS", at: 1450, color: 0xff5d7a, accent: 0x73e4ff },
-    { name: "ANTENAS", at: 2550, color: 0x8df58a, accent: 0xff5d7a },
-    { name: "SKYLINE", at: 4100, color: 0x9db4ff, accent: 0xffd35c },
-    { name: "NOITE ALTA", at: 6200, color: 0xffffff, accent: 0x73e4ff },
-    { name: "LIMITE ZERO", at: 9000, color: 0xfff3a3, accent: 0xff5d7a },
+    { name: "CIANO", color: 0x73e4ff, accent: 0xffd35c },
+    { name: "OURO", color: 0xffd35c, accent: 0x73e4ff },
+    { name: "ROSA", color: 0xff5d7a, accent: 0x73e4ff },
+    { name: "VERDE", color: 0x8df58a, accent: 0xff5d7a },
+    { name: "VIOLETA", color: 0xb47cff, accent: 0xffd35c },
+    { name: "AZUL", color: 0x4f8dff, accent: 0xffffff },
+    { name: "BRANCO", color: 0xffffff, accent: 0x73e4ff },
+    { name: "LARANJA", color: 0xff8b3d, accent: 0x8df58a },
   ];
 
   const runtime = {
@@ -724,7 +726,7 @@
       const districtInfo = districtFor(this.score);
       const district = districtInfo.current;
       const accentColor = district.accent || 0xffd35c;
-      const districtLevel = districtInfo.index;
+      const districtLevel = Math.min(6, districtInfo.index);
       const flowAlpha = 0.08 + (this.flow / 100) * 0.2;
       g.fillStyle(district.color, flowAlpha);
       g.fillCircle(PLAYER_SCREEN_X + 52, this.player.y + this.player.h - 70, 62 + this.flow * 0.42);
@@ -987,14 +989,12 @@
   }
 
   function districtFor(score) {
-    let index = 0;
-    for (let i = 0; i < districts.length; i += 1) {
-      if (score >= districts[i].at) index = i;
-    }
-    const current = districts[index];
-    const next = districts[index + 1] || null;
-    const span = next ? next.at - current.at : 1;
-    const progress = next ? clampNumber((score - current.at) / span, 0, 1) : 1;
+    const safeScore = Math.max(0, Number(score) || 0);
+    const index = Math.floor(safeScore / VISUAL_PROGRESS_STEP);
+    const paletteIndex = index % districts.length;
+    const current = districts[paletteIndex];
+    const next = districts[(paletteIndex + 1) % districts.length];
+    const progress = clampNumber((safeScore % VISUAL_PROGRESS_STEP) / VISUAL_PROGRESS_STEP, 0, 1);
     return { current, next, index, progress };
   }
 
